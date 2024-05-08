@@ -1,0 +1,64 @@
+prompt,completion,transcript,example_id
+"Here is a partial transcript of a meeting:
+
+Marketing: Just put it on the deskt ..desktop.
+Project Manager: No on the desktop you'll find you should find that there's a project documents link. A well actually just there.
+Marketing: Project documents,
+Project Manager: Yeah. That's it.
+Marketing: yeah.
+Project Manager: If you dump it in there.
+Marketing: What's your username?
+Project Manager: Your username.
+Marketing: What's your username and password? Mm-hmm. Sorry.
+Project Manager: Okay.
+Marketing: Okay. There we go.
+Project Manager: Excellent. Right. Hopefully that's us ready to uh to go. So. Functional design meeting. We'll have to flesh out some of the uh stuff. Um we'll start with the minutes of the last meeting. Not a lot thankfully to say. We introduced ourselves, discussed the possibility of a macro facility, interac interacting the TV a bit more, um mentioning of bar-code, joystick for user manipulation, um and ergonomics of the remote control as well. Um it's come to my attention the following. Teletext has become outdated due to the populat popularity of the internet. Remote control should only be used for the TV. Um due for uh time to market and possibly also cost issues. Um also key is the corporate image should stay recognisable, um f uh your colour and slogan of course is down at the bottom there. Um. Now. Just to say quickly uh I would have thought that only being used for a television the macro facility may now not be required.
+User Interface: Mm.
+Project Manager: Um or at l its functionality would have been of limited use. So to the point in my opinion anyway that it might not be worth pursuing. Um if anybody disagrees we can uh definitely say so. Um and hopefully we'll just crack on and we'll get everything going. Um I'd like to if possible hear from our Marketing Expert first, to help us gain an idea of where we're going to go.
+Marketing: 'Kay.
+Project Manager: So um I'll just load up your presentation from here if you want.
+Marketing: Sure. Um, sh would you like to ... I'll just do it from here.
+Project Manager: Yep. Sorry. Uh. Is yours the- 
+Marketing: Um, try second one maybe. Try it, yeah maybe.
+Project Manager: Oh sorry. Okay, right.
+Marketing: Yeah. Okay. Oh, I thought I put in my last name, I guess not, but ...
+Project Manager: Uh if you-  that's all right. If you-  do you want me to just cycle through it for you or?
+Marketing: Okay. ... Oh yeah, that'd be fine, that'd be great.
+Project Manager: Yeah?
+Marketing: Okay. Functional requirement by me Ebenezer. ...
+Project Manager: Okay.
+Marketing: Okay, so um we did some research, we asked one hundred people their opinions on remote controls. We asked some uh open ended questions, just, what are your opinions on the remote control, got a lot of re responses, and we asked some very specific questions, and we got a lot of good feedback. Please bear in mind this is only a hundred people, so even when the groups are divided into fifteen to twenty five, twenty five to thirty five, there's only maybe ten people ... fifteen people in each group.
+Project Manager: Okay.
+
+In 4 concise bullet points, summarize the key notes.
+Make sure each bullet has at least ten words, but is no longer than sixty words. Begin each item in the list with the symbol ""*"".","* Project Manager reviews minutes of the last meeting: possibility of a macro facility, more interaction with the TV, incorporation of bar code, joystick, and general ergonomics of the remote. Remote control should only be used for the TV to limit cost and time to market. Corporate image should stay recognisable.
+* Marketing will upload a presentation to a specified folder. The presentation includes research findings from a hundred people about their opinions on remote controls.
+* The research consisted of both open-ended questions and specific questions regarding remote controls. A lot of useful feedback was received.
+* Marketing urges that the sample size of a hundred people should be taken into consideration when interpreting the results.","Marketing: Just put it on the deskt ..desktop.
+Project Manager: No on the desktop you'll find you should find that there's a project documents link. A well actually just there.
+Marketing: Project documents,
+Project Manager: Yeah. That's it.
+Marketing: yeah.
+Project Manager: If you dump it in there.
+Marketing: What's your username?
+Project Manager: Your username.
+Marketing: What's your username and password? Mm-hmm. Sorry.
+Project Manager: Okay.
+Marketing: Okay. There we go.
+Project Manager: Excellent. Right. Hopefully that's us ready to uh to go. So. Functional design meeting. We'll have to flesh out some of the uh stuff. Um we'll start with the minutes of the last meeting. Not a lot thankfully to say. We introduced ourselves, discussed the possibility of a macro facility, interac interacting the TV a bit more, um mentioning of bar-code, joystick for user manipulation, um and ergonomics of the remote control as well. Um it's come to my attention the following. Teletext has become outdated due to the populat popularity of the internet. Remote control should only be used for the TV. Um due for uh time to market and possibly also cost issues. Um also key is the corporate image should stay recognisable, um f uh your colour and slogan of course is down at the bottom there. Um. Now. Just to say quickly uh I would have thought that only being used for a television the macro facility may now not be required.
+User Interface: Mm.
+Project Manager: Um or at l its functionality would have been of limited use. So to the point in my opinion anyway that it might not be worth pursuing. Um if anybody disagrees we can uh definitely say so. Um and hopefully we'll just crack on and we'll get everything going. Um I'd like to if possible hear from our Marketing Expert first, to help us gain an idea of where we're going to go.
+Marketing: 'Kay.
+Project Manager: So um I'll just load up your presentation from here if you want.
+Marketing: Sure. Um, sh would you like to ... I'll just do it from here.
+Project Manager: Yep. Sorry. Uh. Is yours the- 
+Marketing: Um, try second one maybe. Try it, yeah maybe.
+Project Manager: Oh sorry. Okay, right.
+Marketing: Yeah. Okay. Oh, I thought I put in my last name, I guess not, but ...
+Project Manager: Uh if you-  that's all right. If you-  do you want me to just cycle through it for you or?
+Marketing: Okay. ... Oh yeah, that'd be fine, that'd be great.
+Project Manager: Yeah?
+Marketing: Okay. Functional requirement by me Ebenezer. ...
+Project Manager: Okay.
+Marketing: Okay, so um we did some research, we asked one hundred people their opinions on remote controls. We asked some uh open ended questions, just, what are your opinions on the remote control, got a lot of re responses, and we asked some very specific questions, and we got a lot of good feedback. Please bear in mind this is only a hundred people, so even when the groups are divided into fifteen to twenty five, twenty five to thirty five, there's only maybe ten people ... fifteen people in each group.
+Project Manager: Okay.",32

@@ -1,0 +1,1663 @@
+prompt,metadata
+"Here is a partial transcript of a meeting:
+
+Professor C: Maybe you're done, then.
+Grad E: and if you just take the-  And I g I got the feeling that we are ..the only ones right now who have a running system. I don't know what the guys in Kaiserslautern have running because e the version-  that is, the full version that's on the server d does not work. And you need to do a lot of stuff to make it work. And so it's-  And even Tilman and Ralf sort of said "" yeah there never was a really working version that uh did it without th all the shortcuts that they built in for the uh October @ @ version "". So we're actually maybe ahead of the System Gruppe by now, the system-  the integration group. And it was, uh-  It was fun to some extent, but the uh the outcome that is sort of of scientific interest is that I think both Ralf and Tilman-  um, I know that they enjoyed it here, and they r they-  they liked, uh, a lot of the stuff they saw here, what-  what we have been thinking about, and they're more than willing to-  to um, cooperate, by all means. And um, part of my responsibility is uh to use our internal "" group- ware "" server at EML, make that open to all of us and them, so that whatever we discuss in terms of parsing and-  and generating and constructions w we-  we sort of uh put it in there and they put what they do in there and maybe we can even um, get some overlap, get some synergy out of that. And um, the, uh-  If I find someone at-  in EML that is interested in that, um I-  I may even think that we could look-  take constructions and-  and generate from them because the tree adjoining grammars that-  that Tilman is using is as you said nothing but a mathematical formalism. And you can just do anything with it, whether it's syntactic trees, H P S G- like stuff, or whether it's construction. So if you ever get to the generation side of constructing things and there might be something of interest there, but in the moment we're of course definitely focused on the understanding, um, pipeline.
+Professor C: Anyth- any other ... {comment} uh repo visit reports sort of stories? uh we-  so we now know I think, what the landscape is like.
+Grad B: Mm- hmm.
+Professor C: And so we just push on and-  and uh, do what we need to do. And one of the things we need to do is the um, and this I think is relatively tight-  tightly constrained, is to finish up this belief- net stuff. So. Uh. And I was going to switch to start talking about that unless there're m other more general questions. OK so here's where we are on the belief- net stuff as far as I understand it. Um. Going back I guess two weeks ago uh Robert had laid out this belief- net, missing only the connections. Right? That is-  {comment} So, he'd put all th all the dots down, and we went through this, and, I think, more or less convinced ourselves that at least the vast majority of the nodes that we needed for the demo level we were thinking of, were in there. Yeah {comment} we may run across one or two more. But of course the connections weren't. So, uh Bhaskara and I went off and looked at some technical questions about were certain operations sort of legitimate belief- net computations and was there some known problem with them or had someone already uh, solved you know how to do this and stuff. And so Bhaskara tracked that down. The answer seems to be uh, "" no, no one has done it, but yes it's a perfectly reasonable thing to do if that's what you set out to do "". And, so the current state of things is that, again, starting now, um we'd like to actually get a running belief- net for this particular subdomain done in the next few weeks. So Bhaskara is switching projects as of the first of June, and uh, he's gonna leave us an inheritance, which is a uh-  hopefully a belief- net that does these things. And there're two aspects to it, one of which is, you know, technical, getting the coding right, and making it run, and uh stuff like that. And the other is the actual semantics. OK? What all-  you know, what are the considerations and how and what are the ways in which they relate. So he doe h he doesn't need help from this group on the technical aspects or if he does uh we'll do that separately.
+Grad B: Mm- hmm.
+Professor C: But in terms of what are the decisions and stuff like that, that's something that we all have to work out. Is-  is that right? I mean that's-  that's both you guys ' understanding of where we are?
+Grad E: Absolutely.
+Professor C: OK.
+Grad G: So, I guess, um-  Is there like a latest version of the belief- net-  of the proposed belief- net? Like- 
+Grad E: We had um decided- 
+Grad G: like- 
+Grad E: Um. Well, no, we didn't decide. We wanted to look into maybe getting it, the visualization, a bit clearer, but I think if we do it, um, sort of a paper version of all the nodes and then the connections between them, that should suffice.
+Grad G: Mm- hmm. Yeah, that should be fine.
+Professor C: Yeah I mean, that's a separate problem.
+Grad D: Yeah, I- 
+Professor C: We do in the long run wanna do better visualization and all that stuff.
+Grad E: Yeah.
+Professor C: That's separable, yeah.
+Grad D: I did look into that, uh in terms of, you know, exploding the nodes out and down ag
+Professor C: Yep. Right.
+Grad D: JavaBayes does not support that. I can imagine a way of hacking at the code to do that. It'd probably take two weeks or so to actually go through and do it,
+Professor C: Not-  not at this point.
+Grad D: and I went through all the other packages on Murph- Kevin Murphy's page,
+Professor C: Right.
+Grad D: and I couldn't find the necessary mix of free and uh with the GUI and, with this thing that we want.
+Professor C: Well, we can p If it's-  If we can pay-  Yeah. If you know it's paying a thousand dollars or something we can do that. OK? So-  so don't view free as-  as a absolute constraint.
+Grad D: OK. OK, so then I'll go back and look at the ones on the list that- 
+Professor C: OK. And you can ask Kevin.
+Grad E: But- 
+Grad G: Yeah.
+Grad D: Mmm.
+Grad E: But- 
+Grad G: Yeah, the one that uh people seem to use is uh Hugin or whatever?
+Professor C: Hugin, yeah that's free.
+Grad G: How exp I don't think it's-  Is it free? Because I've seen it advertised in places so I-  it seems to- 
+Professor C: Uh, it may be free to academics. Like I-  I don't know. I have a co {comment} I have a copy {comment} that I l I downloaded.
+Grad G: OK.
+Professor C: So, at one point it was free.
+Grad G: OK.
+Professor C: Uh but yo I noticed people do use Hugin so um,
+Grad D: How do you spell that?
+Professor C: HUGIN.
+Grad F: Why
+Professor C: And Bhaskara can give you a pointer. So then, in any case, um-  But paying a lit You know, if i if it's uh-  Probably for university, it's-  it's gonna be real cheap anyway. But um, you know, if it's fifty thousand dollars we aren't gonna do it. I'm mean, we have no need for that.
+Grad E: I-  I also s would suggest not to d spend two weeks in-  in-  in changing the-  the JavaBayes code.
+Professor C: No,
+Grad B: Yeah.
+Professor C: he's not gonna do that.
+Grad D: OK.
+Grad E: I-  I will send you a pointer to a Java applet that does that, it's sort of a fish- eye. You-  you have a node, and you click on it, and it shows you all the connections,
+Grad D: Mmm.
+Grad E: and then if you click on something else that moves away, that goes into the middle. And maybe there is an easy way of interfacing those two. If that doesn't work, it's not a problem we-  we need to solve right now. What I'm-  what my job is, I will, um, give you the input in terms of-  of the internal structure. Maybe node by node, or something like this? Or should I collect it all
+Grad G: Mm- hmm.
+Grad E: and- 
+Professor C: Doesn't matter.
+Grad G: Um, just any like-  like sort of rough representation of the entire belief- net is probably best.
+Grad E: OK. And um you're gonna be around? t again, always Tuesdays and Thursdays afternoon- ish? As usual? Or will that change?
+Grad G: Yeah-  I mean, yeah, I can-  like I c Um. This week I guess um, kind of-  I have a lot of projects and stuff but after that I will generally be more free. So yes, I might-  I can be around. And g I mean, generally if you email me also I can be around on other days.
+Grad E: Yeah. OK.
+Professor C: Yeah and this is not a crisis that-  I mean, you do, e everybody who's a student should, you know do their work, get their c courses all in good shape and-  and-  and-  and then we'll dig-  d dig down on this.
+Grad E: Yeah, that's-  Yeah. OK. No, that's good. That means I have I h I can spend this week doing it. So.
+Grad G: OK.
+Grad B: How do you go about this process of deciding what these connections are? I know that there's an issue of how to weight the different things too, and stuff. Right? I mean do you just sort of guess and see if it sort of- 
+Professor C: Right. Well there-  there-  there There're two different things you do.
+Grad E: It's- 
+Professor C: One is you design and the other is you learn. OK? So uh what we're gonna do initially is-  is do design, and, i if you will, guess.
+Grad B: OK.
+Professor C: OK. Uh that is you know use your best knowledge of-  of the domain to uh, hypothesize what the dependencies are and stuff.
+Grad B: Right. OK.
+Professor C: If it's done right, and if you have data then, there are techniques for learning the numbers given the structure
+Grad B: Yeah.
+Professor C: and there are even techniques for learning the structure, although that takes a lot more data, and it's not as @ @ and so forth and so on. So uh but for the limited amount of stuff we have for this particular exercise I think we'll just design it.
+Grad B: Alright.
+Grad E: Yeah. Fo- Hopefully as time passes we'll get more and more data from Heidelberg and from people actually using it and stuff.
+Grad B: OK.
+Grad E: So but this is the ..... {comment} ..long run.
+Grad B: Yeah.
+Grad E: But to solve our problems ag uh a mediocre design will do I think in the beginning.
+Grad B: Yeah, that's right. Yeah, oh, and by the way, speaking of data, um, are there I could swore-  uh, I could swear I saw it sitting on someone's desk at some point, but is there a-  um a transcript of any of the, sort of, initial interactions of people with the-  with the system? Cuz you know, I'm still sort of itching to-  to look at what-  look at the stuff, and see what people are saying.
+Professor C: Mm- hmm. Yeah. Yeah make yourself a note. So and-  and, of course Keith would like the German as well as the English, so whatever you guys can get.
+Grad E: The German. Oh yeah, of course, German. Yeah.
+Professor C: Yeah, the y your native language, right? You remember that one.
+Grad E: OK. That's important, yeah.
+Grad B: Yeah,
+Professor C: So he'll get you some data.
+Grad B: u OK. Yeah, I mean I-  I sort of um found the uh, uh the audio of some of those, and um, it kind of sounded like I didn't want to trudge through that, you know.
+Grad E: Hmm.
+Grad B: It was just-  Strange, but.
+Professor C: Yep.
+Grad E: We probably will not get those to describe because they were trial runs.
+Grad B: Oh yeah, OK.
+Grad E: Um, but uh that's th but we have data in English and German already.
+Grad B: OK, yeah, I mean.
+Grad E: So.-  Transcribed. I will send you that. OK.
+Professor C: OK, so while we're still at this sort of top level, anything else that we oughta talk about today?
+Grad E: Ho- how was your thingy.
+Grad B: Oh, um, I just wanted to, uh, s like mention as an issue, um, you know last meeting I wasn't here because I went to a linguistics colloquium on the fictive motion stuff,
+Professor C: Oh right.
+Grad B: and that was pretty interesting and you know, I mean, seems to me that that will fairly obviously be of relevance to uh-  to what we're doing here because you know people are likely to give descriptions like you know, "" What's that thing uh right where you start to go up the hill, "" or something like that, you know, meaning a few feet up the hill or whatever from some reference point and all that stuff so I mean, I'm sure in terms of you know, people trying to state locations or, you know, all that kind of stuff, this is gonna be very relevant. So, um, now that was-  the talk was about English versus Japanese, um, which obviously the Japanese doesn't affect us directly, except that, um, some of the construction-  he'd-  what he talked about was that you know in English we say things like th you know, "" your bike is parked across the street "" and we use these prepositional phrases, you know, "" well, if you were to move across the street you would be at the bike "", but um in-  in Japanese the-  the more conventionalized tendency is to use a-  sort of a description of "" where one has crossed to the river, there is a tree "". Um, and you know, you can actually say things like, um, "" there's a tree where one has crossed the river, but no one has ever crossed the river "", or something like that. So the idea is that this really is you know that's supposed show that's it's really fictive and so on. But um-  But the point is that that kind of construction is also used in English, you know, like "" right where you start to go up the hill "", or "" just when you get off the train "", or something like that to-  uh, to indicate where something is.
+Professor C: Mmm.
+Grad B: So we'll have to think about- 
+Professor C: So-  how much is that used in German?
+Grad E: Um. The uh-  Well-  I wa I was on a uh-  on a-  on a different sidetrack.
+Professor C: Oh, OK.
+Grad E: I mean, the-  the Deep Map project which um is undergoing some renovation at-  at the moment, but this is a-  a three language project : German, English, Japanese.
+
+# instructions
+Summarize all key points from this meeting in 4 bullet points.
+Each bullet point should be concise.
+Use between twenty-five to forty-five words for each bullet.
+Use active voice only. Do not use the passive voice.
+Order the bullets such that more general bullets come first.
+Do not include any action items that resulted from the meeting.
+Do not include speaker names unless it is important to differentiate.
+Start the bullets with '- '.
+","{'num_bullets': 4, 'min_bullet_length': 25, 'max_bullet_length': 45, 'bullet_start': '- '}"
+"Here is a partial transcript of a meeting:
+
+Project Manager: ...
+Industrial Designer: ... But it would be expensive, no? If you use colour LCD.
+User Interface: No.
+Industrial Designer: Uh instead of that maybe we can change the colour of the assembler.
+Marketing: Mm-hmm.
+Industrial Designer: Maybe we can just-  if users want more colours they can pay more money to get this uh the shapes and they can have different assembly.
+User Interface: Um, I am here.
+Project Manager: Okay.
+Industrial Designer: So users have different-  I mean they have their own interests, colour interests and so- 
+Project Manager: So?
+User Interface: Mm-hmm.
+Industrial Designer: So we can just-  if they want they can just pay another two Euro.
+Project Manager: Uh-huh, okay, so
+User Interface: 'Kay.
+Project Manager: you you propose something with option i that increase the price if we-  if you want o more colours ... on LCD,
+Industrial Designer: Yeah. Yeah yeah yes. If they want like uh-  so that we can-  yeah.
+Marketing: Kind of upgradable uh ... remote control.
+Project Manager: yeah.
+Industrial Designer: Yeah.
+Project Manager: Okay.
+Marketing: Wow, wow.
+Industrial Designer: Just they'll get few more things and few more colours.
+User Interface: Okay, what uh-  there's one more decisi uh one more solution in fact, um ... 'cause there are some some paints that can change colour according to where they are, like they can reflect different colours depending on what is around, like what colour is around, and depending on the temperature,
+Industrial Designer: Lights, yeah.
+Marketing: Mm.
+Project Manager: And thermodynamic also. Mm-hmm.
+Industrial Designer: Yeah.
+Marketing: Like a chameleon.
+Project Manager: Mm-hmm.
+User Interface: yeah.
+Industrial Designer: Yeah yeah.
+User Interface: We can make it in fact.
+Project Manager: Yeah but that's maybe mo too much expensive, yeah.
+User Interface: If if if the- 
+Industrial Designer: Mm.
+User Interface: okay.
+Marketing: Mm-hmm.
+Project Manager: But uh it can be in uh maybe in an-  a gradable version,
+User Interface: Mm-hmm, mm-hmm,
+Project Manager: but- 
+Industrial Designer: Yeah.
+User Interface: so- 
+Marketing: Because uh I think there are two kinds of people. Those for which the remote control is uh is to be uh something useful uh I'm going to talk about this later but-  and those for which is something that that that uh is uh specific to them so it it's like a signature. My remote control is pink. Nobody else than me has a pink remote control.
+Project Manager: Mm-hmm.
+User Interface: Uh-huh.
+Industrial Designer: ...
+Marketing: ... And that makes me special.
+Project Manager: Okay
+Marketing: ...
+Project Manager: and you think that we don't have to make to make them pay more because of ... uh o or this is- 
+Industrial Designer: ...
+Marketing: ... I think I think they would be ready p ready to pay more for that.
+Project Manager: Okay, so
+Marketing: Those who wanted to have it pink.
+Project Manager: so ... i it's not uh a s base service
+Industrial Designer: Uh- 
+Marketing: No mm no.
+Project Manager: it's a- 
+User Interface: So,
+Industrial Designer: Mm.
+User Interface: ..be an option,
+Project Manager: Mm.
+User Interface: yeah.
+Marketing: It might be optional, yeah.
+Project Manager: Okay.
+Industrial Designer: But those people will be really few, no? So like we can ..those- 
+Marketing: The the young people the young people want to be different from their friends.
+Industrial Designer: Ah.
+Marketing: Although similar but have something just slightly better. Pink ...
+Project Manager: Mm-hmm.
+Industrial Designer: Yeah.
+Project Manager: So m so
+Industrial Designer: Mm. ...
+Project Manager: maybe that's-  ... if that it's a selling point maybe it has to be the base.
+User Interface: ... Yeah, yeah,
+Marketing: Mm. Yeah.
+User Interface: yeah. But you know if you want to be different you just take your remote control with you all the time.
+Project Manager: ... And you'll be different.
+User Interface: ... And it makes you different,
+Industrial Designer: ...
+Marketing: Yeah, yeah.
+User Interface: you know?
+Marketing: You always have your remote.
+Project Manager: ... Uh in the train uh, hello uh no. ... Want to change my neighbour.
+User Interface: Anyone has their remote controls here?
+Marketing: Oh, you don't? ... Yeah. You don't have your remo ...
+User Interface: No? ...
+Industrial Designer: ...
+Marketing: Wh you you know like for instance take the iPod. It's a kind of remote control. ... Uh it's white
+User Interface: Mm-hmm.
+Marketing: and it's so white that you see it from any anywhere.
+Project Manager: Mm.
+Marketing: It has this distinctive look and feel and look ..which people seems to like ...
+User Interface: Okay.
+Marketing: just because it's ... a colour that we don't usually see in a remote control. White.
+Project Manager: Mm-hmm.
+User Interface: Uh-huh, uh-huh. Could we integrate something into our remote control, something like light?
+Marketing: Seems important.
+Industrial Designer: Hmm.
+User Interface: That they can use it in darkness, like. Hand light,
+Marketing: Mm ..glow in the dark,
+Industrial Designer: ..
+Project Manager: ...
+User Interface: yeah.
+Industrial Designer: Yeah
+Marketing: so- 
+Industrial Designer: maybe like the infrared like we can put some radium chips or something
+Marketing: ...
+User Interface: ... Mm-hmm.
+Industrial Designer: so that like-  at least um- 
+Project Manager: Iradium? ...
+Industrial Designer: yeah.
+User Interface: ... Okay. Okay.
+Industrial Designer: ... ..... Yeah,
+Marketing: ...
+Project Manager: Ah sorry. Mm.
+Industrial Designer: that- 
+Project Manager: ... Okay. So mm- 
+User Interface: Okay. S well,
+Marketing: Okay.
+User Interface: let's go on maybe with the presentation.
+Marketing: Yeah. Uh-huh, yeah sure. ...
+Project Manager: Mm-hmm. ...
+User Interface: And um the remote control's going to be smart
+Industrial Designer: Oh.
+User Interface: but how smart should it be to not to complicate things too much?
+Project Manager: ...
+User Interface: And uh
+Industrial Designer: ...
+User Interface: I dunno
+Marketing: ...
+User Interface: that's a question to you and to mm to- 
+Marketing: Well so I heard that uh it seems that speech recognition is something that can be done uh so that's the smartness of the thing.
+User Interface: Mm-hmm.
+Marketing: Currently we don't have guns with speech recognition or uh beer cans with speech recognition
+Industrial Designer: ...
+Marketing: but we may have remote controls with speech recognition.
+User Interface: Okay, okay.
+Industrial Designer: ...
+Marketing: I dunno. ...
+Project Manager: Mm, that's a nice world. ...
+User Interface: ... So just just just just think about it um.
+Marketing: ...
+User Interface: ..Thank you.
+Marketing: Don't touch the remote.
+Project Manager: Okay.
+Marketing: But-  yeah. Are are you saying here that uh the remote controls should be aware of who is using it? So for instance the young guy would not be able to use it because his father doesn't want.
+User Interface: Uh yeah I just want to say it should be real smart.
+Marketing: Like with some-  Maybe fingerprint recognition or- 
+User Interface: ... Voice recognition is quite tough. I say don't use it, and the control just looks.
+Industrial Designer: Yeah.
+Marketing: Mm.
+User Interface: 'Cause I ordered jus To l to l lock it.
+Marketing: Um-  Mm.
+Industrial Designer: Uh that-  mm that could be feasible I guess, like-  So since we have-  we want to do some speaker dependent speech recognition uh so we can use- 
+Marketing: Okay. So it could be smart in that way.
+Industrial Designer: yeah. Yeah, yeah. ...
+Project Manager: Mm. Okay.
+Marketing: But for instance th I I'm thinking about the other uh uh particularity that the the remote control could have. S since it it knows who is using it, it might also record the kind of uh channels you are u more often using and uh levels of volumes that you're more often uh-  things like that
+Industrial Designer: Yeah.
+Project Manager: Mm.
+User Interface: Yeah, sure.
+Industrial Designer: Yeah.
+Marketing: and provide you ways of using them, I dunno, somehow,
+Industrial Designer: Yeah.
+Marketing: I dunno, that might be expensive
+Project Manager: Mm-hmm.
+Marketing: but
+Industrial Designer: Uh it's- 
+Marketing: that might also be a good sales pitch again.
+Project Manager: ...
+Industrial Designer: Hmm.
+Marketing: ... The remote that knows you. ...
+Project Manager: ...
+User Interface: Mm-hmm. ...
+Industrial Designer: ...
+Project Manager: Okay.
+User Interface: Okay, thanks.
+Project Manager: ... So it's- 
+Marketing: My turn?
+Project Manager: yeah, Marketing Expert.
+Marketing: ..Okay, it's alright.
+Project Manager: Participant two?
+Industrial Designer: Four.
+Project Manager: Four,
+Marketing: Four, I think.
+Project Manager: sorry.
+Marketing: Trend, yeah. No uh yes. Okay, so I'm going to talk about trends and um I hope this can help us to to understand l how we should design our remote control. So, next slide please. So first maybe just a small recap on ... how how do we watch trends so it's not so uh simple you might think that it's easy but uh it's not so simple. Anyway these days uh the best uh source of information is the web as you know, so have to to go often on the web and look at uh what the others are doing, and ask real people who are using real remote controls every day uh or any other tool that is similar to a remote control which basically is a small device that people ..have with them, always, like a phone. We can we can use the phone as a as a good uh uh ... example of where to in be inspired. Of course those tha d who are watching the trends are also-  have also to be inspired because in fact they're not only watching the trends, they're inventing it, they're creating the trend. I hope I'm going to try to help you on that. This is more risky because you're not following the trend,
+Project Manager: ... ...
+Marketing: you try to invent it, which means either you succeed and you make a lot of money or you don't and you're out of business. ...
+Industrial Designer: ...
+Marketing: So anyway uh next slide please. ... Uh to be to be quick ... there's a lot of words here but uh basically there are-  uh in in the market of of remote controls there are three aspects that we should very-  pay much attention to. The first one, which seems to be the most important one, is that it has to be fancy, it has to have a fancy look and feel. And uh interestingly this is the very most important thing. It has to be fancy. Strangely enough it's more important to be fancy than to be wi and now that's the second thing it has to be, it has to be technologically i innovative,
+Industrial Designer: ..
+Marketing: it has to be new with some of uh new uh technology inside and uh and this is also uh more important than the last thing which we w may think that would have been the most important, which is that it should be easy to use and it should be easy to use as a remote control. So as you see uh ... it first have to be very nice, s something that people are proud of uh uh that i uh they can be id identified with uh and and then uh something that um contains very novel stuff that they can talk about with their friends, huh, mine has this and not yours. And finally of course it has to be useful as a remote control but it seems that it's not so important that it's useful as a remote control. ...
+Industrial Designer: ...
+Project Manager: ...
+Marketing: Next slide please.
+Project Manager: Mm.
+Marketing: Uh and now in a more uh general uh uh broad way of seeing th uh the thing. If we look back and not uh look at only remote controls I think it's important to see that the trends are quite the same in many areas so-  currently the the trends that we see in l in l big cities like Paris and Milan, well, it seems that this year things should have uh a fruit and vegetable uh way of ... of look or feel
+Project Manager: ... ...
+Industrial Designer: .....
+Marketing: or so. ...
+Industrial Designer: ...
+Marketing: And I think of course uh ... i it applies to everything. That's the thing with trends. ... It it can travel f from clothe to furniture ... same idea.
+Project Manager: ... ... ...
+Marketing: Fruit and vegetable. Think fruit and vegetable. ... And uh if we co we compare to last year, now it has to be spongy,
+Industrial Designer: Mm.
+User Interface: What is spongy?
+Marketing: yeah. Well
+Project Manager: ...
+Industrial Designer: Yeah
+Marketing: this ... so so I think uh uh i
+Industrial Designer: ... kind of um maybe-  ..
+Marketing: When we were talking about rubber,
+Industrial Designer: Yeah it- 
+Marketing: I think uh the rubber aspect might be important because it's what is probably more feasible in terms of sponginess.
+Project Manager: Mm-hmm.
+Industrial Designer: Yeah.
+Project Manager: S So maybe titanium it's not a good idea.
+Industrial Designer: Yeah. ..We need to think about-  mm mm.
+Marketing: Seems not, seems not.
+Project Manager: Mm-hmm.
+Marketing: Yeah.
+Project Manager: ... Um ... sorry Mark.
+Marketing: So-  ...
+Project Manager: It seems to be- 
+Marketing: Think more of uh something in the colours of uh like fruit and vegetables and spongy,
+Industrial Designer: Fruit. Even shape?
+Marketing: as a-  even in the shape it has to be more round and uh more uh uh look natural somehow. I mean- 
+Industrial Designer: ... More ..
+Project Manager: Mm-mm.
+Industrial Designer: yeah. Yeah.
+Marketing: And not those futuristic uh remote control with angles and uh and titanium like.
+Project Manager: Mm-hmm.
+Industrial Designer: ... Mm.
+Project Manager: Hmm. ... You're old-fashioned.
+Marketing: So that's what people seem to-  ... yeah i I know it's quite far from what you thought
+Project Manager: Sorry. ...
+Industrial Designer: ...
+Marketing: but that's that's fashion and-  ...
+Project Manager: ...
+Industrial Designer: ...
+User Interface: Okay.
+Project Manager: Okay.
+Marketing: Okay that's all I have to say.
+Project Manager: Mm you have questions?
+Industrial Designer: So these abilities are mainly ad addressed by young people? Or it's- 
+
+# instructions
+Summarize all key points from this meeting in two bullet points.
+Each bullet point should be concise.
+Use between thirty to forty words for each bullet.
+Use active voice only. Do not use the passive voice.
+Order the bullets such that more general bullets come first.
+Do not include any action items that resulted from the meeting.
+Do not include speaker names unless it is important to differentiate.
+Start the bullets with '- '.
+","{'num_bullets': 2, 'min_bullet_length': 30, 'max_bullet_length': 40, 'bullet_start': '- '}"
+"Here is a partial transcript of a meeting:
+
+Marketing: ...
+Project Manager: Then we have plastic, wood, rubber.
+Industrial Designer: ...
+Project Manager: ..we have half rubber, half plastic.
+User Interface: Mm, yes.
+Project Manager: No titanium. Special colour. Yes, yellow.
+Industrial Designer: Uh, yellow. ...
+Marketing: Yeah.
+User Interface: Mm, yeah.
+Project Manager: Interface, push-button. Scroll-wheel, integrated scroll-wheel push push-button, or LCD display.
+Industrial Designer: ...
+Project Manager: So, we have the LCD We have two scroll-wheels? Or one?
+Industrial Designer: One.
+Marketing: One.
+Project Manager: And it's not really a s
+Industrial Designer: Joystick uh thing.
+Marketing: ...
+Project Manager: Yeah, it's this one. Now, uh button supplement.
+Industrial Designer: ...
+Project Manager: Special colour. We already-  Uh, that's the-  from the-  for the buttons. The buttons are regular colour.
+User Interface: Mm, yeah.
+Project Manager: So, then uh-  then then then then then then-  Then- 
+Industrial Designer: ... We're not gonna make it. ...
+Project Manager: Uh, no. It's too expensive.
+Industrial Designer: Yeah. ... Wh
+Project Manager: So, we have to change something.
+Industrial Designer: What what are the costs?
+Project Manager: Fifteen Euros.
+Industrial Designer: ... Fifteen.
+Project Manager: Yeah, well uh when we lose one scroll-wheel, it's okay. 'Cause we can't lose the battery. We can't lose the advanced chip. We can't lose the double curve. We have rubber, special colour.
+Marketing: ... We would have uh n
+Industrial Designer: A special colour.
+Project Manager: Oh, no, we- 
+Industrial Designer: Uh, I don't think it's a very special colour.
+Project Manager: No, it's uh-  Sorry?
+Industrial Designer: Yellow? Uh, is it a special colour?
+Marketing: For a remote control.
+Industrial Designer: ... What?
+Marketing: I've-  For a remote control, I think it is. ...
+Industrial Designer: Yeah. ...
+Marketing: If we would have uh uh normal buttons instead of uh the joystick. For up down left right.
+Project Manager: Um, then we uh lose two Euros. Then we have thirteen Euros. Half a Euro too much. Exactly the special colours. So- 
+Industrial Designer: And what if we use only one sort of um-  Um ... just only plastic or only rubber?
+Project Manager: That's one Euro.
+Industrial Designer: One Euro discount. ...
+Project Manager: So, I don't think that's good. Mm-  I think we have to keep the LCD. If- 
+Industrial Designer: If we change the joyst uh the joystick thing into a button up, button down, button right, button left.
+Project Manager: Yes. Then it's only thirteen Euros.
+Industrial Designer: ... And then we'll lose fifty cent in what?
+Project Manager: So uh-  yeah. Yeah. Then you have-  Or you have to cut this off.
+Industrial Designer: Uh-  uh-uh.
+Project Manager: Then it's not good anymore.
+Industrial Designer: No.
+Project Manager: So, wait. Okay. I'll have a look. ... We- 
+Industrial Designer: And if you say it's just a r uh normal colour-  it's a normal colour, wh ...
+Project Manager: Yellow rubber.
+Industrial Designer: No one will see it. ...
+Project Manager: Yeah, normal.
+Industrial Designer: Normal colour, and the the joystick away, and put the button up, button down, right, left.
+Project Manager: Uh- 
+Industrial Designer: And it's twelve Euros, I think.
+Project Manager: One minute, please. Uh-  ... Is it maximum. Um-  Yeah, it's normal colour. But if you lose the joystick, it's still uh an advanced chip?
+Industrial Designer: No. Uh, no, no, no.
+Project Manager: Or it's then a regular?
+Industrial Designer: Uh-  Oh, wait wait wait.
+Marketing: The advanced chip was for the LCD wasn't it?
+User Interface: Yeah.
+Industrial Designer: Oh yeah.
+Project Manager: So, the advanced is for the LCD and the regular for the joystick.
+Industrial Designer: Oh yeah. Yeah. Yeah, yeah.
+Project Manager: And what if we lose the LCD?
+Industrial Designer: If we lose the LCD, then we have an uh regular chip and no LCD.
+Project Manager: Yeah, regular chip. But-  Is it a good design?
+Industrial Designer: Uh, yeah. Then you'll have to m uh see the menu on the television. And you don't have the LCD.
+Marketing: If uh-  ...
+Industrial Designer: So, the TVs has to uh-  have to be up-to-date.
+Marketing: If we have the n no buttons-  If we have we have uh not a joystick but buttons, we would have-  uh, we have thirteen Euros?
+Project Manager: Mm, yes.
+Industrial Designer: Yeah.
+Marketing: And then uh we move the the colour. What will that be?
+Industrial Designer: Yeah.
+Project Manager: Then it's okay.
+Industrial Designer: Huh. No knew that.
+Marketing: Yeah. ...
+Project Manager: Okay, so no joystick. Oh no, but we-  then we get push-buttons from half a Euro.
+Industrial Designer: Yeah, then it's twelve Euro fifty, then it's okay.
+Project Manager: Uh, yes, yes, yes, yes. No joystick. Push-buttons. No special colour. Twelve and a half Euros. Then it's okay. So, we have to change that a little bit. And you cannot use the red and green button. Because if you give them a s uh colour,
+User Interface: Okay. All the same uh- 
+Project Manager: you have to pay point two Euros.
+Industrial Designer: So, all the buttons has to-  have to be the same colour.
+Project Manager: Yes.
+Industrial Designer: But then the print on it will g um change it. Make it uh for everybody to see what button it is. Uh l How you call it?
+User Interface: Mm, yeah. Recognisable. Like what- 
+Industrial Designer: Recognisable, yeah.
+Project Manager: Yes.
+User Interface: Yeah. Mm, yeah.
+Project Manager: So- 
+Industrial Designer: Yeah?
+User Interface: Okay.
+Industrial Designer: Okay.
+Project Manager: ..So-  Well-  Now we have to change that, but that's okay. Rubber. What's the normal colour?
+User Interface: ...
+Industrial Designer: ... Oh, well that's clear.
+Project Manager: ... So-  And- 
+Marketing: ...
+Project Manager: Where's ..? Yeah. So, now it's- 
+Industrial Designer: And the joystick away. And its buttons.
+Project Manager: Yeah. It is. But then it will be just that ones.
+Industrial Designer: Yeah.
+Project Manager: Now it's- 
+Industrial Designer: ...
+Marketing: ..still, he waited at the-  ...
+Project Manager: Very good.
+Marketing: No.
+Project Manager: Now, uh project eva evaluation. Well-  What do you think of it? Uh-  ...
+Marketing: ...
+Industrial Designer: About the
+Project Manager: About the project.
+Marketing: Project.
+Industrial Designer: process. Went good. Uh-  I think uh the creativity uh ... was good enough.
+User Interface: ...
+Industrial Designer: ... We have a gun instead of a remote control. Um-  Uh leadership. Yeah, you were the project project manager, and uh had the final vote.
+Project Manager: ...
+Industrial Designer: ... So-  ... yeah that was clear. Team-work okay. Everybody uh has something uh to say about it. And uh-  no, uh o only the-  ... the drawing uh was very difficult. But, nah. New ideas found. ... Nope.
+Project Manager: Okay. And you.
+User Interface: Yeah, well the same. I I espe I especially uh liked the the means, the the SMARTboard and uh-  Yeah, it uh-  It brings up new ideas when you work with uh with it.
+Project Manager: Okay.
+User Interface: Yeah.
+Marketing: Yeah, I think you have to compare it to if you would have a normal um normal project without laptops uh and without these devices. I think um-  Well, the laptops if you have them out front of you, you sometimes looking at that instead of the presentation. Um, well uh the draw-board, well you can draw things. But it not really going very convenient.
+User Interface: Mm-hmm.
+Marketing: Uh, maybe it will be easier if you have a smaller monitor ..and uh you would also see there. And with a normal mouse. Um, and uh the project. Yeah, I agree on what was said uh mainly. Uh, yeah but you always have that some people are talking more than others. And maybe is then um the task of the the project manager to also uh ask more to the people uh less talking. To tell their opinion.
+Project Manager: Okay. Well, what do I have to say. I think it was good. Not too many discussions.
+Industrial Designer: ... No.
+Project Manager: So, it's good for the speed.
+User Interface: No.
+Industrial Designer: Yep.
+Project Manager: So, I think we're ready.
+Marketing: Yeah.
+Project Manager: Good price. Evaluation ready. Ready.
+User Interface: ...
+Industrial Designer: ... Beer.
+Project Manager: ...
+Marketing: ...
+Industrial Designer: ...
+Project Manager: ... That's it.
+Industrial Designer: Yeah? Okay then.
+Marketing: Okay.
+User Interface: ...
+
+# instructions
+Summarize all key points from this meeting in 2 bullet points.
+Each bullet point should be concise.
+Use between 25 to 45 words for each bullet.
+Use active voice only. Do not use the passive voice.
+Order the bullets such that more general bullets come first.
+Do not include any action items that resulted from the meeting.
+Do not include speaker names unless it is important to differentiate.
+Start the bullets with '* '.
+","{'num_bullets': 2, 'min_bullet_length': 25, 'max_bullet_length': 45, 'bullet_start': '* '}"
+"Here is a partial transcript of a meeting:
+
+PhD A: Yeah.
+Professor B: Seems reasonable.
+Postdoc G: I need t Hmm. I need to ask one question.
+PhD A: Yeah.
+Postdoc G: Which is um so this issue ... of the uh legalistic aspects of the pre- sent you know pre- adapted-  Yeah, well, so what I mean is um the-  uh the data that you take into SRI, first-  first question, you're maintaining it in-  in a place that wouldn't be publicly readable that-  that kind of stuff, right?
+PhD A: U um
+PhD C: From the outside world or
+Postdoc G: By uh people uh who are not associated with this project.
+PhD A: Oh.
+Grad E: It's human subjects issues, I told you about that.
+PhD C: Um oh.
+Postdoc G: Exactly.
+PhD C: Well OK we have n no names. Although I sh um
+Grad E: That-  that's not the issue,
+PhD C: de audio data itself?
+Grad E: it's just the audio data itself, until people have a chance to edit it.
+Postdoc G: Mm- hmm, exactly.
+PhD C: Uh so well I can-  I can protect my directories through there.
+Postdoc G: Yeah.
+PhD C: Right now they're not-  they're in the speech group directories which-  so I will- 
+Postdoc G: Great.
+PhD C: I didn't know that actually.
+Professor B: Yeah so we just have to go through this process of having people approve the transcriptions,
+PhD C: Yeah OK.
+Professor B: say it's OK.
+PhD C: Right OK.
+Postdoc G: Yeah, we had to get them to approve em and then i cuz-  cuz the other question I was gonna ask is if we're having um you know it's but this-  this meeting that you have, no problem cuz I-  I well I mean I-  I speak for myself
+Grad E: It's us.
+Postdoc G: but-  but I think that we didn't do anything that but well anyway so ... uh I wouldn't be too concerned about it with respect to that although we should clear it with Eric and Dan of course but these results are based on data which haven't had the uh haven't had the chance to be reviewed by the subjects
+PhD C: That's true.
+Postdoc G: and I don't know how that stands, I mean if you-  if you get fantastic results and it's involving {comment} data which-  which later end up being lessened by, you know certain elisions, then I don't know but I wanted to raise that issue,
+Professor B: Well we,
+Postdoc G: that's all.
+Professor B: I mean once we get all this streamlined it may be sh it-  hopefully it will be fairly quick but we get the transcriptions, people approve them and so on it's just that we're
+Grad E: Alright we need to work at a system for doing that approval so that we can send people the transcripts
+Postdoc G: Great.
+PhD A: Mmm.
+Postdoc G: Yeah.
+Grad E: and get back any bleeps that they want
+PhD C: Yeah actually the bleeps are also an issue I thought.
+Professor B: It's gonna be a rare thing that there's a bleep for the most part.
+PhD A: U uh actually I had a question about the downsampling, um I don't know who, I mean how this was done but is-  is there-  are there any um ... issues with downsampling
+PhD C: Don did this.
+PhD A: because I know that the recognizer um that we use h can do it sort of on the fly um so we wouldn't have to have it eh you know do it uh explicitly beforehand. And is there any um i are there other d sev uh is there more than one way to do the downsampling where one might be better than another?
+Grad F: There are lots of w ... there are lots of ways to do the downsampling um different filters to put on,
+PhD A: OK. Right. OK.
+Grad F: like anti- aliasing stuff.
+PhD A: So-  so the-  th
+Grad E: I don't think we even know which one I assume you're using syncat to do it?
+Grad F: No, I'm using uh SN SND uh are resample.
+Grad E: Or sound resample?
+PhD C: Re- re ref
+Grad E: Resample.
+PhD C: yeah.
+Grad E: Yeah and Dan's archaic acronyms.
+Grad F: RSMP. Yeah, I don't really.
+PhD C: Missing all the vowels.
+Grad F: I just-  yeah I found it.
+PhD C: Some of the vowels,
+Grad E: Not all of them.
+PhD C: almost all the vowels, that's the hard part.
+PhD A: So-  so the other thing we should try is to just take the original wave forms,
+Grad E: And a few of the consonants.
+PhD A: I mean segment them but not downsample them.
+PhD C: Yeah we could-  we could try that and-  and compare
+PhD A: And-  and feed them to-  feed them to the SRI recognizer and see if-  if the SRI front- end does something.
+Grad F: Yeah, that's- 
+PhD C: Yeah.
+Grad E: I suspect that's sort of premature optimization, but Sure.
+PhD C: We can try it. I-  I only downsampled them first cuz I was
+PhD A: Well- 
+Grad F: I mean that's just one line-  that's one line of code to comment at
+PhD C: yeah
+PhD A: Right and-  and it doesn't-  is no more work ... for um you know for us.
+Grad F: so
+Grad E: Mm- hmm.
+Grad F: Yeah.
+PhD C: Well they're just bigger to transfer, that's why I s downsampled them before but
+PhD A: Well but they're only twice as big so
+PhD C: Well I mean that was-  if it's the same then we can downsample here
+PhD A: I mean it's-  it's just a
+PhD C: but if it's- 
+Grad F: Although those eighty meg files take a while to copy into my directories
+PhD C: Yeah.
+Grad F: so, but no, I mean it's not-  i it wouldn't be a problem if you're interested in it- 
+PhD C: We could try that.
+PhD A: Yeah I mean it would be uh you know it would probably take uh about um you know
+Grad F: it would- 
+PhD A: minus the transfer time it would-  it would take uh you know ten minutes to try and-  and-  and
+Grad F: Yeah.
+Grad E: It's about a fifty minute drive, right?
+PhD A: And-  and if for some reason we see that it works better then we might investigate why
+PhD C: Well it takes more disk space too so I was just- 
+PhD A: and, you know, what-  Yeah.
+Grad F: Mmm. In the front- end we could do that.
+PhD A: Yeah.
+Professor B: So you just train-  just different filters
+Grad F: Yeah, I- 
+Professor B: and so you're just wondering whether the filter is
+Grad F: Yeah, I can imagine it would be- 
+PhD A: Right. Right.
+PhD C: So we could try that with this particular twenty minutes of speech and sort of see if there's any differences.
+Grad F: I mean I guess there's some- 
+PhD A: You know a at some point someone might have optimized whatever filtering is done for the actual recognition um performance.
+Grad F: Hmm.
+PhD A: So in other words right,
+Professor B: Right.
+PhD A: so
+Grad E: It just seems to me that, you know small changes to the language model and the vocabulary will so swamp that that it may be premature to worry about that. I mean so one is a half a percent better than the other I don't think that gives you any information.
+PhD C: Well it's just as easy to-  to give you the sixteen K individual,
+Grad E: Yep.
+PhD C: it was just more disk space you know for storing them
+Professor B: Are you-  are you using uh uh mel cepstrum or PLP over there?
+PhD C: so
+PhD A: Mel cepstrum.
+Professor B: So probably doesn't matter.
+PhD C: Well we could try.
+Grad F: There's-  there's your answer.
+Professor B: But-  but it wouldn't hurt to try,
+PhD C: Could easily try
+PhD A: That's what I would assume but you never know,
+Professor B: yeah.
+PhD C: so
+PhD A: you know.
+Professor B: Sure. No the reason I say this
+Postdoc G: Just-  Mm- hmm.
+Professor B: PLP uses uh auto- regressive filtering and uh modeling and so it can be sensitive to the kind of filtering that you're doing
+PhD A: Mm- hmm.
+Professor B: but uh uh mel cepstrum uh might not-  b you wouldn't expect to be so much but
+PhD C: Well we can try it if you generate like the same set of files just up to that point where we stopped anyway and just sti stick them somewhere
+Grad F: Yeah, it's-  it's really not a problem.
+PhD A: Actually, no.
+PhD C: and I'll rerun it with
+PhD A: Don't stop. Don't stop at that part because we're actually using the entire conversation to estimate the speaker parameters,
+Grad F: Keep going. Yeah.
+PhD A: so shouldn't use-  you should s you know, get
+Grad F: Yeah, I mean I'll-  I have to do is eh e the reference file would stay the same,
+PhD C: OK.
+PhD A:  Right.
+Grad F: it's just the individual segments would be approximately twice as long
+PhD A: Mmm.
+PhD C: Right. Right.
+Grad F: and I could just replace them with the bigger ones in the directory,
+PhD A: Right.
+PhD C: I mean I corrected all- 
+Grad E: Yeah.
+Grad F: that's not a problem.
+PhD C: I mean I hand- edited the whole-  the whole meeting so that can be run it's just-  Once we get the-  the bug out.
+PhD A: Mmm.
+Postdoc G: One-  one question which is I-  I had the impression {comment} from this-  from this meeting that w that I transcribed that um that there was already automatic downsampling occurring,
+PhD A: Yeah. Mm- hmm.
+Postdoc G: is that I thought that in order to
+Grad E: Yep.
+Postdoc G: so it was-  so it's like there's already down
+Grad E: There's one level that's already happening right here.
+Professor B: This is being recorded at forty- eight kilohertz. Which is more that anybody needs
+Postdoc G: OK.
+Grad E: Right.
+Grad F: Oh.
+Grad E: And it gets downsampled to sixteen.
+Postdoc G: OK.
+Professor B: so
+PhD C: And that's actually said in your meeting,
+Grad F: Hmm.
+Postdoc G: Oh OK.
+PhD C: that's how I know that.
+Postdoc G: That's exactly, and that's how I know it.
+Professor B: Yeah.
+PhD C: I-  I ... It's like are we downsampling to sixteen?
+Professor B: It's a digital audio orientation for the board
+PhD C: Right.
+PhD A: Mmm.
+Professor B: it's in the monitor so it's
+PhD C: Thank God it's not ... more than that.
+Grad E: So- 
+Professor B: Yeah.
+Grad E: And I have no idea what filter it's using,
+Grad F: Is eight kilohertz-  is-  is eighty kilohertz generally accepted as like standard for voice?
+Grad E: so
+Professor B: For telephone stuff.
+Grad E: Telephone.
+PhD D: Telephone.
+Grad F: Yeah that's what I was gonna say, I mean like- 
+Professor B: So it's-  it's-  it's just that they were operating from Switchboard which was a completely telephone database
+Grad F: so Oh, I see, so.
+Professor B: and so that was a standard for that sixteen s
+Grad F: OK.
+Grad E: So sixteen seems to be pretty typical for with this sort of thing.
+Professor B: Sixteen is more common for-  for uh broadband stuff that isn't- 
+Grad F: Right.
+Grad E: That isn't music.
+Professor B: that isn't music and isn't telephone,
+PhD C: And I guess if you're comparing like-  uh if you wanna run recognition on the PZM stuff you would want you don't want to downsample the wh that
+Professor B: yeah.
+Grad E: Why is that?
+Professor B: I don't know.
+PhD C: right? Well I don I mean if it's any better
+Professor B: No actually I would think that you would-  you would get better-  you'd get better high frequencies in the local mike.
+Grad E: All the way around I'd think.
+Professor B: Uh but who knows? I mean we do ... we-  we-  we-  we-  we wanna find all this stuff out,
+PhD C: Yeah well we could try it.
+Grad E: Yeah.
+Professor B: we don't know.
+Grad E: We're gonna have plenty of low frequency on the P Z Ms with the fans.
+PhD C: OK. Yeah.
+Professor B: Uh yeah. Yeah.
+PhD C: Oh yeah there was just one more thing I wanted to say which is totally unrelated to the recognition except that um well-  well it's sort of related but um good news also uh I got-  well Chuck Fillmore agreed to record meetings but he had too many people in his meetings and that's too bad cuz they're very animated and but uh Jerry also agreed so uh we're starting on-  on
+PhD A: They're less animated.
+PhD C: Well but he has fewer-  he-  he won't have more than eight and it's a meeting on even deeper understanding, EDU, so that sounds interesting. As a compliment to our front- end meeting
+Grad E: Dot EDU?
+PhD C: and um so that's gonna start Monday and one of the things that I was realizing is um it would be really great if anyone has any ideas on some kind of time synchronous way that people in the meeting can make a comment to the person whose gonna transcribe it or-  or put a ... push a button or something when they wanna make a note about "" oh boy you should probably erase those last few "" or uh "" wait I want this not to be recorded now "" or uh something like that s
+Professor B: Weren't we gonna do something with a pad at one point?
+Postdoc G: The cross pads?
+Grad E: Yeah, we could do it with the cross pads.
+PhD C: Cuz I was thinking you know if-  if the person who sets up the meeting isn't there and it's a group that we don't know um and this came up talking to-  to Jerry also that you know is there any way for them to indicate-  to make sure that the qu request that they have that they make explicitly get addressed somehow
+Professor B: Yeah.
+PhD C: so I don't know if anyone has ideas or-  you could even write down "" oh it's about three twenty five and ""- 
+Professor B: Well what I was just suggesting is-  is we have these-  this cross pad just for this purpose
+Grad E: Yeah, and use that.
+Professor B: and just use that
+Grad E: Not a bad idea.
+Professor B: and if we sink it in- 
+PhD C: That would be great.
+Professor B: The other thing is eh
+PhD C: That be great.
+
+# instructions
+Summarize all key points from this meeting in five bullet points.
+Each bullet point should be concise.
+Use between twenty to thirty words for each bullet.
+Use active voice only. Do not use the passive voice.
+Order the bullets such that more general bullets come first.
+Do not include any action items that resulted from the meeting.
+Do not include speaker names unless it is important to differentiate.
+Start the bullets with '# '.
+","{'num_bullets': 5, 'min_bullet_length': 20, 'max_bullet_length': 30, 'bullet_start': '# '}"
+"Here is a partial transcript of a meeting:
+
+Project Manager: All set? Okay. Cool. Right. So um basically I'm just gonna go over real quickly um some news I've just got from the board on how we're supposed to do with this um ... remote control. And then I'm gonna turn over to you guys to make brief presentations um on what you've found and then we'll have a bit of discussion. So basically uh what I've just found out from the board I dunno if you guys got this email as well but it needs to be television only. So no-  we're not doing D_V_D_, we're not doing anything else,
+Marketing: Okay.
+Project Manager: it's just gonna be a television remote. ... Um it also needs to have the company colours included in it.
+Industrial Designer: ...
+Project Manager: ... Um so that's red and black. And it has to have the slogan, case you guys forget the slogan it's, we put fashion in electronics. Um and no teletext. I'm not sure what teletext is but I'm assuming you guys do, so we don't wanna include that um in this particular design. ... For reasons that I don't really know. There's-  but it's the board so there you go. So basically um given those guidelines which will have some effect on how we design we'll discuss it later I mean 'cause it's television only we'll be able to change our uh ... um well we can s sacrifice more function for a better television remote. ... Anyway. So I'm gonna turn over to the Industrial Designer uh to go ahead and make a presentation on- 
+Industrial Designer: Okay. So do I unplug this bit here?
+Project Manager: Oh, right yeah.
+Marketing: Gotta plug you in.
+Project Manager: Yep. Might have to hit function F_ eight but it looks like it's gonna come up. Yep. Cool.
+Industrial Designer: Okay. Right. That's page one of my presentation.
+Project Manager: Brilliant.
+Marketing: Very nice. For your first PowerPoint it's lovely.
+Industrial Designer: So the uh method. We're gonna have to understand how remote controls work and res uh successfully complete this project. Um remote control works as follows. This is all pretty basic stuff you guys. Um sends message to another system, so there's an energy source involved in that like a battery or solar power, something along those lines, there's an integrated circuit, which is the microchip, um and that actually compose the messages and usually the way a a remote control works is it sends infrared bits to another system. A user interface controls the chip, basically that's the casing and the buttons and um accordingly the messages as well. So my findings, um I just did a preliminary study here and uh I found that too much metal in remote design could potentially cause interference with the ability of the remote to send commands. And too much metal can cause remotes to behave unexpectedly by receiving false signals. Um too much metal is used sometimes and people pick up radio signals and the like, and there's also the possibility of the remote catching on fire and injuring the customer, just think of those lawsuits, that'd be really bad.
+Marketing: ...
+Project Manager: ... 'Kay.
+Industrial Designer: Therefore I suggest primarily plastic construction. Um, components. Just some ideas that I had, um, energy source, it's kinda hip to be eco friendly so I thought maybe we could do something with solar power with an alkaline battery backup. Um the user interface, I was-  since we can't use metal I was thinking maybe a high grade recycled plastic.
+Project Manager: Mm.
+Industrial Designer: The chip, um, silicon based chip I don't really see any way around that, we can't really be different in that respect. Um, the sender well I'm thinking infrared 'cause it is the industry standard, multi channel, that's a word I made up, I don't really know what it means.
+Project Manager: 'Kay. Fair enough.
+Marketing: ...
+Industrial Designer: Uh PAL and N_T_S_C_ compatible and uh probably a two hundred foot range.
+Project Manager: 'Kay.
+Industrial Designer: Uh and the receiver of course is any number of electronic devices. Um but in this case it'll only be TVs. Um personal preferences, I really think that we should use plastic as opposed to metal, um, the company simply can't afford this kinds of lawsuits
+Marketing: Fine.
+Industrial Designer: which adm admittedly is gonna come at the cost of a certain aesthetic value,
+Project Manager: ... Is is there a way that we can use um modern types of polymers, or mo modern types of plastics
+Industrial Designer: 'cause we were thinking- 
+Project Manager: that maybe do have some kind of aesthetic value um like if a white-  like if we talk about like well like on the lapt on these laptops and other ones they use a a pretty nice,
+Industrial Designer: Right.
+Marketing: It needs, yeah.
+Project Manager: you can do i is there some kind of nice colo der quality plastic that we can work with?
+Industrial Designer: Yeah that shouldn't be a problem. Um for example the plastic they have on your laptop there is something that's perfectly possible for us to do.
+Project Manager: Okay, okay.
+Industrial Designer: ... That's the end of my presentation.
+Marketing: Cool.
+Project Manager: Great. Thank you very much Nathan. ... Um if next we can have the um User Interface Developer go ahead and make a brief presentation that'd be great as well.
+User Interface: ...
+Project Manager: S plug yourself in here. Mm. ... Um hit function F_ eight real quickly, hold down-  Mm.
+Industrial Designer: ...
+Marketing: Looks like you're in okay.
+Industrial Designer: Is it plugged in well? There it goes. Computer adjusting.
+User Interface: Th
+Project Manager: There you go. Sweet.
+Marketing: There you go.
+User Interface: Well so. Here we have a uh my technical functions design presentation. Um so a few of the requirements we need here. Uh we n basically need to operate an electronic device, it needs to be universal um and possibly uh operate several different types of devices although we now uh find that uh that that's no problem.
+Project Manager: Yeah sorry I couldn't get that g to use before.
+User Interface: Um so some of my findings. Um basically wanna send messages uh to a television set. Um that would be any number of different things uh such as switch on the television, uh switch to the next channel, that sort of thing, I think we're all quite uh quite uh intelligent and know know what a normal remote control does. Um ... now some of the other things I found is a a complicated remote control sorry that we can't quite see my red there very well
+Project Manager: Oh yeah look at that.
+Industrial Designer: Mm. ...
+User Interface: but uh this remote control has many functions um so it can do a lot of things but it uh it is quite complicated
+Project Manager: Mm-hmm.
+User Interface: and most users will find it uh find that they won't use most of the functions because they don't know how to use them and don't wanna take the time to learn how to do it. As you also notice it's quite a boring design. Um. Another remote control, slightly different, it's a simpler remote control uh many less buttons but uh has many fewer functions, um m much easier for the user to manipulate and use. Um it also has a bit of a cheap look and it's also quite boring. So
+Project Manager: ... Nice.
+Industrial Designer: ...
+User Interface: my personal preferences.
+Marketing: ...
+User Interface: ... Revolutionise the idea of uh a remote control. Um so attain the functionality of a complicated device but use a simple formatted display uh for the user to to work with. And I was gonna add another uh slide here but I didn't quite have time there.
+Project Manager: ... Okay.
+User Interface: Um. Just incorporating some of the ideas that we had previously like uh having multiple face but it's uh ...
+Project Manager: Great. Thanks for that Ron.
+Marketing: Right.
+Project Manager: ... 'Kay
+Marketing: Does that mean I'm up?
+Project Manager: yep that's you.
+Marketing: I think so. Okay.
+User Interface: I can plug you in.
+Marketing: Oh that would be perfect. Thank you. Slide show up and running.
+Project Manager: Give it a little bit.
+Marketing: Or not. Uh. Oh there we go. Perfect. Okay. So this is me. Um basically I was looking through some marketing reports that we've got and we had a usability test where we were actually sort-  like watching a hundred people ... use TV remotes and see what it is that they're using and then they filled out a questionnaire about what they like and what they don't about their general TV remote control practices. Um pretty much through testing we were finding out that most of the time, everybody's used to using changing the channel, turning it on, using the volume, m the majority of the time that's all that's going on, the other functions happen, for some people they're important, but the primary uses are really really basic. Um and so big complicated remotes like one we saw in the last presentation are really not the general public's use, they're not using a lot of it, they don't need it, they even find it frustrating when there are all those buttons that they don't know what to do with. ... And um we also found out that uh fifty percent of our people, their-  the worst thing about a remote is how often they lose it. And then they can't find it in the room. So I think what we were talking about with a pager or something, will really come into play with a lot of these people. ... Um there's also a survey about what they liked about remotes,
+Industrial Designer: ...
+Marketing: and pretty much they all think they're hideous and not very useful, and the younger demographics are all really interested in voice recognition options. I don't know if that's something we're ready to look into technically, that's up to the design people, but it is s something worth thinking about, especially since the younger demographic's obviously the one that's gonna keep growing, so if that's the direction we're headed in it's something to think about. Um but basically it really is the primary functions and getting it to look nice, which are the standards. ... So it's a good start for us.
+Project Manager: ... That's great. Thank you Sarah. Right. So um
+Marketing: Need to unplug this?
+Project Manager: yep I'll just uh switch that back here.
+Marketing: Need it back.
+Project Manager: I'll finish up with just a bit of discussion plan on for the next phase.
+Marketing: There you go.
+Project Manager: ... Right so I think we've covered most of these important questions through this um ... through you guys's presentations um ... we've got uh y the Industrial Designer suggests uh or pretty much emphatically suggested that we need to go with plastic. ... Um Sarah, she's recommended that we go for simpler functions, so fewer functions um but we need to decide who are we selling this to, you s your stats suggested that seventy five percent of people under thirty five wanted, thought about voice control,
+Marketing: Oh right.
+Project Manager: ... um so do we wanna go for that, or do we want to go for an older demographic, and my thought is ... um ... we've got w if we're gonna go for a sleek look I mean we are putting the fashion in electronics ... um. ...
+Marketing: ... We're not catering to the pensioners of the world I don't think so.
+User Interface: ...
+Project Manager: Yes. So maybe this-  we should look into this younger demographic. Um. So
+Marketing: Right.
+Project Manager: ... uh we need to wonder ah h about how we make it better and smaller and faster um think we're constrained to plastics very well, we've got this idea, Ron was saying we need to think about uh revolutionising the way it's looking um,
+Marketing: Right.
+Project Manager: which might be easier given that we're going for simpler function and that we're only going for a telly.
+Marketing: Uh.
+Project Manager: Um so um. How-  th this voice operation thing is-  I think is a good idea um assuming that it's doable, um at least for the basic controls, maybe we can balance it that way, you know we can see.
+Marketing: Right.
+Industrial Designer: Mm.
+Project Manager: Okay you can't say record alias tonight at seven P_M_
+Industrial Designer: ...
+Project Manager: but we might be able to say um ... volume up.
+Marketing: Yeah.
+Industrial Designer: Right. I think it would be possible to uh combine the locator device and the voice recognition technology.
+Project Manager: Mm.
+Marketing: ... Oh. That could work. I like that.
+Industrial Designer: With a simple command like locate. And then it could start to beep
+Marketing: Yeah. Something very basic.
+Industrial Designer: and
+Marketing: Right.
+Project Manager: ... Right.
+Industrial Designer: therefore be found.
+User Interface: Sounds good.
+Marketing: Is that only gonna be within our two hundred foot range then?
+Industrial Designer: Oh yeah I think that's very doable.
+Marketing: Okay.
+Project Manager: The difficulty wh would be in um I think like i you couldn't speak into the remote that you're trying to find. 'Kay you have something that picks up a voice from far away- 
+Marketing: Yeah.
+Industrial Designer: It's a good point.
+Project Manager: If it's hidden under the couch-  but then again you have this wee-  this wee thing you know that's just a little chip or whatever that has the page button, maybe that could be voice activated too.
+User Interface: A little sticky pad to stick on top of your uh television.
+Marketing: Mm.
+User Interface: And you just say something to-  into that
+Marketing: Yeah.
+User Interface: and it
+Project Manager: Yeah.
+Industrial Designer: Yeah.
+User Interface: finds your- 
+Marketing: K ...
+Project Manager: Or an isolated magnet or something like, or you know something that wouldn't interfere I don't know that'd be the technical thing
+Marketing: Yeah.
+Project Manager: but-  yeah I like that, I like that, the voice recognition for the paging system.
+User Interface: ... The other thing is we might be able to handle the simplicity of a remote control and kind of put the more complicated things into a voice control. So it could be sold to both the younger market and the older market.
+Marketing: True.
+User Interface: And the younger market could use kind of the voi voice control method and the older market might might k
+Marketing: Making it just an option?
+Industrial Designer: Mm.
+User Interface: exactly and might consider the older market could use the simpler design with the traditional buttons and what not.
+Marketing: Yeah. Right.
+Project Manager: ... Yeah.
+Industrial Designer: I was thinking uh- 
+Marketing: Are we still thinking about this screen-  sorry.
+Industrial Designer: Oh go ahead.
+Marketing: Go ahead. The uh if we're gonna do this touch pad screen thing, it would be still, do we know if that's an option technically right now to that?
+Project Manager: Mm-hmm.
+User Interface: 'S definitely an option technically. I've looked into uh costs of uh touch screen methods and what not,
+Marketing: Okay. Okay.
+User Interface: they seem to be uh you know almost as cheap as a button method at this point.
+Marketing: We're doing okay.
+Project Manager: Okay.
+Marketing: 'Cause it seems like an interesting option especially because then you could have like your primary screen just be these you know four or five basic functions, you can have
+Project Manager: Mm. ...
+Industrial Designer: Yeah.
+Marketing: menu options or something to have all these other complicated voice recognition, settings, things that you're not gonna use every day and that a lot of people aren't gonna use but it is an option there for this hi-tech market that sort of re is the sleek thing we're going for.
+Industrial Designer: Gotta wonder though, if we're adding so much technology to this one remote, are we still gonna be able to meet out twelve pou our twelve fifty Euro you know goal for selling these things.
+Project Manager: Mm-hmm.
+Marketing: True. Worth looking into.
+Project Manager: Mm-hmm. Mm-hmm.
+
+# instructions
+Summarize all key points from this meeting in four bullet points.
+Each bullet point should be concise.
+Use between 10 to 25 words for each bullet.
+Use active voice only. Do not use the passive voice.
+Order the bullets such that more general bullets come first.
+Do not include any action items that resulted from the meeting.
+Do not include speaker names unless it is important to differentiate.
+Start the bullets with '# '.
+","{'num_bullets': 4, 'min_bullet_length': 10, 'max_bullet_length': 25, 'bullet_start': '# '}"
+"Here is a partial transcript of a meeting:
+
+Grad B: OK.
+Grad E: And um, we have a uh, uh-  I have taken care that we have the-  the Japanese generation and stuff. And so I looked into uh spatial description. So we can generate spatial descriptions, how to get from A to B. And-  and information on objects, in German, English, and Japanese.
+Grad B: Mm- hmm.
+Grad E: And there is a huge uh project on spatial descriptions uh-  differences in spatial descriptions. Well, if yo if you're interested in that, so how-  how, I mean it does sort of go d all the way down to the conceptual level to some extent.
+Grad B: OK.
+Grad E: So. Um.
+Professor C: So, where is this huge project?
+Grad E: It's KLEIST. It's the uh Bielefeld generation of uh spatial descriptions and whatever.
+Professor C: Mm- hmm.
+Grad E: 
+Professor C: Well, that may be another thing that Keith wants to look at.
+Grad B: OK.
+Grad E: But um, I-  I think we should leave Japanese constructions maybe outside of the scope for-  for now,
+Grad B: Yeah.
+Grad E: but um definitely it's interesting to look at-  at cross the bordered there.
+Professor C: Mm- hmm.
+PhD A: Are-  are you going to p pay any attention to the relative position-  of-  of the direction relative-  relative to the speaker? For example, there are some differences between Hebrew and English. We can say um "" park in front of the car "" as you come beh you drive behind the car. In Hebrew it means "" park behind the car "", because to follow the car is defined as it faces you.
+Grad E: Mm- hmm. Intrinsic, yeah.
+PhD A: While in English, front of the car is the absolute front of the car.
+Grad B: OK.
+PhD A: So.
+Grad B: Right, so the canonical direction of motion determines where the front is.
+PhD A: Right. Right.
+Grad B: OK.
+PhD A: So, i i i is German uh closer to-  to E uh, uh, uh, uh-  to E I mean uh
+Grad E: Mm- hmm.
+PhD A: I don't think it-  it's related to syntax, though, so it may be entirely different.
+Grad E: Um, as a matter of fact- 
+Professor C: No, it's not.
+Grad B: Right.
+PhD A: Yeah.
+Grad E: Um. Did you ever get to look at the-  the rou paper that I sent you on the-  on that problem in English and German?
+Grad B: I think- 
+Grad E: Carroll, ninety- three. Um. I-  There is a-  a study on the differences between English and German on exactly that problem.
+PhD A: Hmm.
+Grad E: So it's-  they actually say "" the monkey in front of the car, where's the monkey? ""
+Grad B: Mm- hmm.
+Grad E: And, um, they found statistically very significant differences in English and German, so I-  I-  I-  It might be, since there are only a finite number of ways of doing it, that-  that German might be more like Hebrew in that respect.
+Grad B: Hmm.
+Grad E: The solution they proposed was that it was due to syntactic factors.
+PhD A: That-  but it wasn't-  was- 
+Grad E: That syntactic facto factors do-  do play a role there, wh whether you're more likely, you know, to develop uh, choices that lead you towards using uh intrinsic versus extrinsic reference frames.
+PhD A: Right. Mm- hmm. Right.
+Grad B: I mean, it seems to me that you can get both in-  in English depending o
+Professor C: Hmm.
+Grad B: You know, like, "" in front of the car "" could you know-  Like, here's the car sideways to me in between me and the car or something's in front of the car, or whatever. I could see that,
+Professor C: Absolutely.
+Grad B: but-  But anyway, so you know, I mean, this was-  this was a-  a very good talk on those kinds of issues and so on. So uh.
+Grad E: I can also give you uh, a pointer to a paper of mine which is the-  the ultimate taxonomy of reference frames.
+Grad B: Alright! Cool!
+Grad E: So.
+Professor C: Oh.
+Grad E: I'm the only person in the world who actually knows how it works.
+Professor C: Oh.
+Grad E: Not really.
+Professor C: Great. No, I've not seen that.
+PhD A: What do you mean. Um. "" reference frames ""?
+Grad E: It's called a- 
+PhD A: uh uh
+Grad E: It's-  it's spatial reference frames. You actually have only-  Um. If you wanna have a-  This is usually um-  I should-  there should be an "" L "", though. Well actually you have-  only have two choices. You can either do a two- point or a three- point which is you You're familiar with th with the "" origo ""? where that's the center-  "" Origo "" is the center of the f frame of reference.
+Grad B: Hmm.
+Grad E: And then you have the reference object and the object to be localized.
+Grad B: Hmm.
+PhD A: Mm- hmm.
+Grad E: OK? In some cases the origo is the same as the reference object.
+Professor C: So that would be "" origin "" in English,
+Grad F: This was like- 
+Grad B: The origin.
+PhD A: Right
+Grad B: Yeah.
+Professor C: right?
+Grad E: "" Origo "" is a Terminus technikus. in that sense, that's even used in the English literature. "" Origo. ""
+Grad B: Oh, OK. I never heard it.
+Professor C: Alright.
+PhD A: OK.
+Grad B: OK.
+Grad E: And um, so, this video tape is in front of me.
+Grad B: Mm- hmm.
+Grad E: I'm the origo and I'm also the reference object.
+Grad B: Mm- hmm.
+PhD A: Right.
+Grad E: Those are two- point.
+Professor C: Mm- hmm.
+Grad E: And three- point relations is if something has an intrinsic front side like this chair then your f shoe is behind the chair.
+Professor C: Yeah.
+Grad B: Mm- hmm.
+Grad E: And, reference object and-  Um. No, from-  from my point of view your shoe is left of the chair.
+Grad B: Right. You-  you can actually say things like, um, "" it's behind the tree from me "" or something like that, I think, in-  in-  in certain circumstances in English, right? As sort of "" from where I'm standing it would appear that ""- 
+Grad E: Yeah. Yeah. So,
+Grad F: Looks a little bit like Reichenbach for time.
+Professor C: Yeah, it sounds like it, doesn't it,
+Grad B: Yeah.
+Professor C: yeah.
+Grad F: It's a lot like it.
+Grad E: And then-  and then here you- 
+Grad F: Um.
+Grad E: On this scale, you have it either be ego or allocentric.
+Professor C: Mm- hmm.
+Grad E: And that's {comment}-  that's basically it. So. Egocentric two- point, egocentric three- point, or you can have allocentric.
+Grad B: Oh, OK.
+Grad E: So, "" as seen from the church, the town hall is right of that um, fire station "". aa- huh {comment} It's hardly ever used but it's w
+PhD A: I'd love to see it if you-  if you have a copy kind of. Uh.
+Grad B: Yeah.
+Professor C: Yeah. I see this is-  this is getting into Ami's thing.
+PhD A: Here
+Grad B: Mm- hmm.
+Professor C: He's-  he's very interested in that.
+Grad E: OK.
+Professor C: So.
+Grad B: Me too.
+Professor C: Uh. Yeah. Well, why don't you just put it on the web page? There's this EDU-  Right?
+Grad E: Yeah it's-  or-  or just-  Yeah.
+Professor C: Or a link to it.
+Grad E: It's also all on my-  my home page at EML. It's called "" An Anatomy of a Spatial Description "".
+Professor C: Just
+Grad E: But I'll send that link.
+PhD A: OK, great.
+Professor C: Maybe just put a link on. Yeah.
+Grad E: Yep.
+Professor C: By the way, there-  something that I didn't know until about a week ago or so, is apparently, there are separate brain areas for things within reach, and things that are out of reach.
+Grad E: Yep.
+Grad B: Huh.
+Professor C: So there's-  there's uh all this linguistic stuff about you know, near and far, or yon and-  and so forth.
+Grad B: Mm- hmm.
+Professor C: So this is all-  This is-  There's this linguistic facts. But apparently, the-  Uh. Here's the way the findings go. That, you know they do MRI, and-  and if you're uh-  got something within reach then there's one of your areas lights up, and if something's out of reach uh a different one. But here's the-  the amazing result, um, they say. You get someone with a-  with a deficit so that they have a perfectly normal ability at distance things. So the s typical task is subdivision. So there's a-  a line on the wall over there, and you give them a laser pointer, and you say, "" Where's the midpoint? "" And they do fine. If you give them the line, and they have to touch it, they can't. There's just that part of the brain isn't functioning, so they can't do that. Here's the real experiment. The same thing on the wall, you give them a laser, "" where is it? "",
+Grad B: Mm- hmm.
+Professor C: they do it. Give them a stick, long stick, and say "" do it "", they can't do it. So there's a remapping of distant space into nearby space.
+PhD A: Right. So they doubled-  the-  the end-  the end of this- 
+Grad F: Because it's within reach now?
+Grad B: Yeah,
+Professor C: It's not within reach and you use the Within- Reach uh, mechanism.
+Grad B: yeah.
+Grad F: Oh. Wow.
+Grad B: Circuits.
+PhD A: Right.
+Professor C: So I'll d I'll dig you up this reference.
+Grad B: That's cool.
+Professor C: And so this doe This is, uh-  First of all, it explains something that I've always wondered about and I'll do this-  this test on you guys as well. So. Uh. How- I have had an experience, not often, but a certain number of times, when, for example, I'm working with a tool, a screwdriver or something, for a long time, I start feeling the tip directly. Not indirectly, but you actually can feel the tip.
+Grad B: Yeah yeah.
+Professor C: And people who are uh accomplished violinists and stuff like that, claim they also have this kind of thing where you get a direct sensation of, physical sensation, of the end affector.
+Grad B: Yeah. What's going on at the end of the tool,
+PhD A: The ext the-  the-  The extension,
+Grad B: yeah.
+Professor C: Huh?
+Grad B: What's going on at the end of the tool, or whatever.
+Professor C: Yeah, within- 
+PhD A: right.
+Professor C: Huh?
+PhD A: The extension of-  of your hand, right.
+Professor C: Yeah, right. Have you hav y h had this?
+PhD A: The-  I-  I think so. I mean i i it's not exactly the th same thing, but-  but s it-  it-  it's getting close to that.
+Grad B: Yeah.
+Grad F: W what does it feel like?
+Professor C: Oh i it feels like your-  as if your uh neurons had extended themselves out to this tool, and you're feeling forces on it and so forth and-  and you deal directly with it.
+PhD A: I once-  I-  I was playing you know with those um uh devices that allow you to manipulate objects when it's dangerous to get close? So you can insert your hand something
+Grad B: Oh, OK.
+Professor C: Right, yeah-  yeah-  yeah. Yeah.
+PhD A: and there's a correspondence between- 
+Professor C: Yeah.
+PhD A: So I played with it. After a while, you don't feel the difference anymore. I-  I mean it's kind of- 
+Grad B: Mm- hmm.
+Professor C: Yeah, right.
+PhD A: Very-  kind of-  you stop back and suddenly it goes away and you have to kind of work again to recapture it, but yeah.
+Grad B: Yeah.
+Professor C: Right, Yeah, so anyway, so-  So this was the first actual experimental evidence I'd seen that was consistent with this anecdotal stuff.
+Grad B: That's cool.
+Professor C: And of course it makes a lovely def uh story about why languages uh, make this distinction. Of course there are behavioral differences too. Things you can reach are really quite different than things you can't.
+Grad B: Yeah.
+Professor C: But there seems to be an actu really deep embodied neural difference. And i this is, um-  So. In addition to the e
+Grad E: This is more proximal- distal.
+Professor C: Yeah uh exactly. So in addition to e ego and allocentric uh which appear all over the place, you also apparently have this proximal- distal thing which is very deeply uh embedded. S
+Grad E: Well, Dan Montello sort of, he-  he does the uh uh-  th the cognitive map world, down in Santa Barbara. And he-  he always talks about these-  He-  he already-  well-  i probably most likely without knowing this-  this evidence uh is talking about these small scale spaces that you can manipulate versus large scale environmental spaces.
+
+# instructions
+Summarize all key points from this meeting in 5 bullet points.
+Each bullet point should be concise.
+Use between ten to twenty-five words for each bullet.
+Use active voice only. Do not use the passive voice.
+Order the bullets such that more general bullets come first.
+Do not include any action items that resulted from the meeting.
+Do not include speaker names unless it is important to differentiate.
+Start the bullets with '* '.
+","{'num_bullets': 5, 'min_bullet_length': 10, 'max_bullet_length': 25, 'bullet_start': '* '}"
+"Here is a partial transcript of a meeting:
+
+Marketing: If you if you make it cool to have- 
+Project Manager: By the way, we also have this one.
+Marketing: Oh, that's just great.
+Project Manager: Oh, costs nothing. That's nice. ...
+Marketing: Oh, alright. ...
+Industrial Designer: ... Hey but uh I think you'll agree that uh that we that now we have this uh screen, it's it's very uh not practical to ha to consider this after we have designed the entire thing.
+Project Manager: Plastic is-  ... Yes, but I just got it.
+Marketing: ..
+Industrial Designer: ... Well that's pretty uh l
+User Interface: Why why don't we replace the titanium with uh plastic coloured titanium,
+Marketing: That is pretty stupid. ...
+Industrial Designer: N not very practical. ... Well- 
+User Interface: uh titanium-coloured plastic?
+Project Manager: Who?
+Marketing: ...
+Project Manager: You want to dump the titanium?
+User Interface: Yeah well if we uh we we have to get cheaper.
+Project Manager: And make all plastic, then we ha then we're there.
+Industrial Designer: ... But I'm n I don't agree.
+User Interface: But then we we've got to uh run through the eval evaluation process again.
+Industrial Designer: I think- 
+Project Manager: Th then you have a ugly, stupid, l ugly looking, dumb remote that that no-one would buy.
+User Interface: Ah no no.
+Marketing: ...
+User Interface: It's not ugly looking. The looks remain the same.
+Project Manager: No, I don't think so.
+User Interface: Well, I do think so.
+Industrial Designer: I think the titanium just uh provided the the tough look and the and the- 
+Marketing: Y
+Project Manager: Yes. And the feel,
+User Interface: ..feel.
+Project Manager: and th that it is strong, and- 
+Industrial Designer: And also the the older people will like it because of that. And because i
+Marketing: Yeah, I agree.
+Industrial Designer: Alright it's not our target audience, but it's it's useful if it's uh important for old people.
+Project Manager: We still ... we had to focus to get more people from the younger group,
+Industrial Designer: Yeah.
+Project Manager: but not lose the one- 
+Industrial Designer: ... I think the titanium is very important.
+User Interface: Yeah alright but then we we won't get there.
+Industrial Designer: Yeah we have a problem, yeah. W But you can better, yeah, dump the LCD screen then.
+User Interface: We can dump the special colour. We l we use plastic. And plastic is already in colour I think.
+Marketing: I don't think you should dump the LCD screen.
+Industrial Designer: Well what else?
+User Interface: No, nothing.
+Industrial Designer: W I mean uh- 
+Marketing: Or you shou ... It's- 
+User Interface: Amen.
+Marketing: Or change the titanium or dump the LCD screen. But I think you could better change uh titanium to hard a hard kind of plastic looking like titanium than lose the LCD screen.
+Industrial Designer: Yeah.
+User Interface: Yeah.
+Marketing: Because you have lots of functions ... in it too.
+Industrial Designer: ... Yeah, well yeah. Alright.
+User Interface: Yeah.
+Project Manager: Why can't I- 
+User Interface: But- 
+Industrial Designer: I agree with that. So we u we use uh-  Unfortunately. Um. Titanium-coloured plastic.
+Project Manager: I'll put in the report we that we think that fourteen point one is the l m lowest price you can make a remote for that's trendy d these days.
+Marketing: Yeah, I agree.
+Industrial Designer: So titanium-coloured plastic for the back.
+Project Manager: I I'll talk to the managers. ...
+User Interface: No no no no. W Titanium stays there.
+Project Manager: Titanium, I thi I think this this is this is e really good re remote. But-  ...
+User Interface: ...
+Industrial Designer: Yeah this is good,
+Marketing: Osl ...
+Industrial Designer: but it it's not good enough. ... So we have to use the ditch the titanium, I'm afraid.
+Project Manager: Ah those ..those account managers, what do th d what do they know?
+User Interface: Well- 
+Project Manager: Come on. Riot. ...
+User Interface: ...
+Industrial Designer: What do we-  Well what do we know? All we want is a is a fancy design but we don't really consider the costs. So- 
+Project Manager: Yes, yes.
+User Interface: No because we did not know anything about it.
+Project Manager: One and a half Euros. Hmm?
+Industrial Designer: Yeah al alright, yeah.
+Marketing: If you don't have the money, you can't make it.
+Industrial Designer: But we have to deal with it now. So- 
+Marketing: So s If you don't have the money, you can't make it. So this is too expensive.
+Project Manager: So?
+Industrial Designer: So- 
+Marketing: So we have to make it cheaper.
+Industrial Designer: Titanium gone and add plastic.
+User Interface: Yeah, but then we've got money left.
+Marketing: Right.
+Industrial Designer: And on plastic times two and then we uh are there?
+Project Manager: Well, no it's just uh all plastic.
+Industrial Designer: No- 
+Project Manager: ... Well alright. Huh.
+Industrial Designer: ... No yeah well- 
+Project Manager: .....
+Industrial Designer: Oh six. ...
+Marketing: ... It's just free, man.
+Industrial Designer: A lot of plastic, yeah. ...
+Project Manager: ... Four. So- 
+Industrial Designer: No two for the to make it clear.
+Project Manager: But then we can add the special colour? As we have money over uh left. ...
+User Interface: Yeah.
+Project Manager: And we still have money left.
+User Interface: Yeah. W
+Marketing: ...
+Project Manager: What do we want, guys?
+Industrial Designer: I want gold plating.
+Project Manager: ...
+Industrial Designer: No no um-  ...
+Marketing: ... Yeah right. I want chrome. ...
+User Interface: Well I think uh the case is double curved then.
+Project Manager: Yes.
+User Interface: Because you y have that curve
+Industrial Designer: ... We have we have to uh fill- 
+User Interface: and you have that curve.
+Project Manager: Y Oh no. ...
+Marketing: ... Well, th that that is the problem.
+User Interface: Yeah well uh- 
+Industrial Designer: W we ha ...
+Project Manager: Alright.
+Industrial Designer: No no no, but th that's not f um- 
+Project Manager: Safe.
+User Interface: Well y we have curves in all directions.
+Industrial Designer: Well you can you can double curve, if you don't have titanium. And that we dropped,
+Project Manager: So-  alright.
+User Interface: ...
+Industrial Designer: so it it can be done. ... But it's pretty funny. We we do want to reach twelve point five. But it isn't bad to to to stay at eleven.
+Project Manager: Finance?
+User Interface: I mean, this this ain't titanium, but it looks like it.
+Project Manager: Well, guys?
+Industrial Designer: We get more salary, if we make if cheaper than twelve uh twelve and a half.
+Marketing: ... Yeah.
+Project Manager: Guys?
+User Interface: ...
+Project Manager: We have to dump our titanium,
+Marketing: Shoot.
+Project Manager: and we'll hate the managers for that, but now we're going to evaluate our project, of uh project,
+User Interface: ...
+Industrial Designer: Objection.
+User Interface: Pro project. ...
+Project Manager: ... ... project. ... Well, ... satisfaction on for example, are we satisfactory about our creativity?
+Industrial Designer: Well I can't get no satisfaction, but uh-  ...
+Marketing: ...
+Project Manager: ...
+User Interface: ...
+Industrial Designer: I think it's uh-  Well in in if we consider the costs then this is the best, yeah.
+User Interface: ...
+Project Manager: I think it's terrible that we got uh those costs at the last moment.
+Marketing: Yeah.
+User Interface: Yeah. Yeah.
+Marketing: Yeah, me too.
+Project Manager: That's really bad. But that that that's that, yeah that's a reason,
+Industrial Designer: Its it's uh ridiculous actually, but- 
+User Interface: And uh unrealistic.
+Project Manager: but also for our creativity. We had um nice design, and then you get the cost, and you had to dump all your creativity.
+User Interface: Well we we we used our creativity,
+Marketing: Right.
+User Interface: but we just had to adapt it to the costs.
+Project Manager: ...
+Industrial Designer: ... Which isn't very practical,
+Project Manager: Yeah.
+User Interface: ... ... Nei. Uh no. ...
+Industrial Designer: but ... that's the way.
+Project Manager: Well, alright.
+Industrial Designer: Uh-huh. ...
+Project Manager: Uh leadership next.
+User Interface: ... Terrible. ...
+Project Manager: Uh teamwork? ...
+Marketing: ... Leadership.
+User Interface: Leadership? Well- 
+Marketing: Well it's ...-  It was very democratic. ...
+Project Manager: Uh yeah well ... I think so also.
+User Interface: Yeah. Yeah.
+Project Manager: I al I I've uh filled that in in a the questionnaires uh each time, so- 
+User Interface: ...
+Marketing: ... Yeah yeah.
+Project Manager: ... Well the managers were terrible. So, with their all their useless requirements.
+User Interface: ...
+Project Manager: But o alright, the teamwork?
+Industrial Designer: Well uh they they didn't think of the requirements.
+User Interface: ...
+Industrial Designer: It's the requirements of the user, uh I guess.
+Project Manager: No they said, oh we won't d uh we won't uh use teletext, uh we won't use the D_V_D_. ... ...
+Industrial Designer: ... Yeah. Yeah but they base that on on the user specifications.
+User Interface: ...
+Project Manager: Alright, teamwork? Well great I think.
+Marketing: Well- 
+User Interface: Right yeah. ..
+Marketing: Yeah, think so too.
+Project Manager: Uh well what do you, what did you think about the SMARTboard?
+Industrial Designer: ... It was a complete disaster.
+Marketing: ... Yeah, I don't like it. Yeah?
+Industrial Designer: ... No-  Uh it it it uh it is uh- 
+Project Manager: Well- 
+User Interface: No, that's a SMARTboard, and that's a digital pen.
+Project Manager: It's also a It's both the SMARTboards.
+User Interface: Or not?
+Marketing: ...
+Industrial Designer: No it's other way around. That's the SMARTboard.
+Project Manager: I liked this SMARTboard,
+Industrial Designer: That's the digital panel.
+Project Manager: but I hated that one.
+Marketing: This this this isn't a SMARTboard, right?
+Project Manager: Well it's both a SMARTboard.
+Industrial Designer: That's that's the smart
+Marketing: Yeah right. B but you- 
+User Interface: Oh they're both SMARTboards. ...
+Marketing: This is just a large t large television.
+Project Manager: No.
+User Interface: ...
+Industrial Designer: ... A televi Yeah.
+Marketing: You u you use the-  ...
+Project Manager: It's both a SMARTboard, but this one is used for a desktop, and that one is used to to draw.
+Marketing: Yeah, but you ca This is just a beamer function. And here, on this one, you can uh draw the pictures and things like that. But- 
+Project Manager: Well, wi w which one did you like?
+User Interface: ..
+Industrial Designer: ... Yeah. Left or right? ...
+Marketing: That one.
+Project Manager: ... That one. ...
+User Interface: Yeah.
+Marketing: ... That one isn't accurate. ... It just doesn't work.
+Project Manager: Yeah. ...
+User Interface: But I I think this is meant by the digital pen.
+Marketing: You can ...- 
+Project Manager: Yes. Th that is so.
+Industrial Designer: Well I didn't use uh- 
+Marketing: Yeah, but I think there's a big distinction between the ... these th
+Project Manager: We're now talking about the SMARTboards.
+User Interface: Yeah.
+Marketing: I don't need a SMARTboard.
+User Interface: ..Well we we used that one,
+Industrial Designer: Nei It it's much m ...
+User Interface: and we needed it. I think.
+Marketing: Yeah, but ... give me a beamer. That's uh that's much uh much cheaper.
+User Interface: Yeah alright, but- 
+Project Manager: Or install a laptop to a beamer, or have this one standing here in an-  I I like it.
+Marketing: Right.
+Project Manager: Okay, alright.
+User Interface: Yeah I like that one, but that one is terrible.
+Industrial Designer: But uh you can uh-  I I sent it about three times now. Uh ... a green uh board with uh chalk is much more useful than that thing.
+Project Manager: Yeah. Yeah, it is.
+Marketing: Yeah.
+Industrial Designer: The simple uh sch school board.
+Project Manager: So- 
+Marketing: I agree.
+Project Manager: And uh the digi the digital pen? Did uh did you like that one?
+Industrial Designer: I I didn't use it.
+Marketing: No.
+Industrial Designer: I wrote things down but I didn't import it into my laptop.
+Project Manager: I used it uh just to check it out, but uh ...- 
+Industrial Designer: ... That's the ..- 
+Marketing: Yeah.
+Project Manager: You you can't send that to anyone, because you you've scrabbled something on a page for yourself,
+User Interface: ..
+Marketing: Yeah. ... It isn't practical. Right.
+Project Manager: and then you're going to send it, yeah. Well, no.
+Industrial Designer: W ... But also y you write things down. And i you can also bring your your your note block.
+Marketing: Your notepad. Yeah.
+Industrial Designer: So what's the what's the th what's the point of importing it into- 
+Project Manager: It's, no, it it's useless.
+User Interface: Well I I drew this. ..Mm. And I made a mistake. But it it would have been uh useful, if I I could show this on the screen.
+Marketing: ...
+Project Manager: Yes.
+Industrial Designer: ... Yeah alright. For drawings,
+Project Manager: For drawings, yes.
+User Interface: Yeah for drawings.
+Industrial Designer: but not for personal notes. I think that's not very- 
+User Interface: ..N notes mm.
+Industrial Designer: Uh I mean ... you can bring your paperwork along and p Well of course if you have a lot of paper- 
+Project Manager: But- 
+Marketing: Yeah, it might be useful for drawings. I I agree on that.
+User Interface: Mm.
+Industrial Designer: If you've-  If you've-  ...
+Project Manager: But for notes, it i you you have to put that in a strict-  Uh you have to put a name, standard date, and all those things. And notes uh for a meeting are very strict. So if you uh were to write them down for yourself, and then put that in your computer, you still have to type it over to Word.
+User Interface: ...
+Industrial Designer: ...
+Project Manager: So it doesn't d doesn't have any-  ...
+Marketing: Yeah, right.
+User Interface: ...
+Industrial Designer: Yeah I understand.
+Marketing: That Stefan use.
+Industrial Designer: But I think uh d this option is only useful if you've got a lot of paperwork. ... You can't-  It's not very uh ni Yeah well a lot of documents are-  Yeah.
+
+# instructions
+Summarize all key points from this meeting in 3 bullet points.
+Each bullet point should be concise.
+Use between ten to thirty words for each bullet.
+Use active voice only. Do not use the passive voice.
+Order the bullets such that more general bullets come first.
+Do not include any action items that resulted from the meeting.
+Do not include speaker names unless it is important to differentiate.
+Start the bullets with '* '.
+","{'num_bullets': 3, 'min_bullet_length': 10, 'max_bullet_length': 30, 'bullet_start': '* '}"
+"Here is a partial transcript of a meeting:
+
+Mr. Jamie Schmale (HaliburtonKawartha LakesBrock, CPC): Thank you, Chair. According to Vaughn Palmer in an editorial in the Vancouver Sun regarding the secret Wet'suwet'en deal, Palmer writes:     The hereditary chiefs calculated the two governments would sign despite the objections from the elected chiefs. They likewise got the terms they wanted in the MOU while giving up absolutely nothing. Just as they figured governments would keep the contents secret from the public.   Can the minister describe another situation in which the federal government negotiated a secret deal of this magnitude with unelected people?
+Hon. Carolyn Bennett (Minister of Crown-Indigenous Relations): I thank the member for his ongoing concern and I want to remind him that actually it is in keeping with the Supreme Court decision of 1997 that we were to now begin those conversations with the Wet'suwet'en hereditary chiefs who took the case to the Supreme Court. As we've said many times, this is not an agreement; this is an MOU that establishes the path forward for the substantive discussions towards a final agreement, which would describe the future governance and the implementation of Wet'suwet'en rights and title. It is about a shared commitment.
+Mr. Jamie Schmale: Mr. Chair, if it is a shared commitment, why on the eve of the signing ceremony did the four elected chiefs denounce the hereditary chiefs for keeping them in the dark?
+Hon. Carolyn Bennett: Again, it's really important that the member understand that there was a process for the hereditary chiefs to go back to their communities and discuss with them. Any agreement after the good work that will happen now would have to go back and seek the approval of all of the communities.
+Mr. Jamie Schmale: Mr. Chair, the Burns Lake Band members are openly wondering if they're still a band or if the few unelected hereditary chiefs will control everything now. Minister, can you assure them that going forward you will honour their concerns and take the time to listen?
+The Acting Chair (Mr. Bruce Stanton): I ask honourable members to still direct their questions through the chair. The honourable minister.
+Hon. Carolyn Bennett: Actually, the honourable member knows that the next steps include the further and ongoing engagement by the Wet'suwet'en in their house groups and that will include the six elected chiefs of the Wet'suwet'en nation, their community members and many others. This is about going forward and making sure that any
+The Acting Chair (Mr. Bruce Stanton): We go back to Mr. Schmale.
+Mr. Jamie Schmale: Thank you, Chair. Cynthia Joseph, a chief councillor with the Hagwilget First Nation says the MOU between Ottawa, the province and the Wet'suwet'en hereditary chiefs was only shared with her community members on May 9, two days after it was published in the media. Is this part of the open and transparent government all Canadians can expect of the Prime Minister?
+Hon. Carolyn Bennett: Walking the path of reconciliation means that we work with our partners and there is a way that they do the work within their communities. It is going to be an agreement to begin the work, but any final agreement is going to have to be approved by all members of the nation in terms of developing a consensus for the agreement
+The Acting Chair (Mr. Bruce Stanton): We go back to Mr. Schmale.
+Mr. Jamie Schmale: Thank you, Chair. Does the minister have any concerns regarding claims by several former female hereditary chiefs that they were stripped of their hereditary status because they didn't agree with the men?
+Hon. Carolyn Bennett: Again, it is going to be really important that the work take place within the Wet'suwet'en nation to determine their future governance, to determine their way of working with Canada and to make sure
+The Acting Chair (Mr. Bruce Stanton): We go back to Mr. Schmale.
+Mr. Jamie Schmale: Thank you, Chair. For some reason it seems to be a problem to stand up for these hereditary female chiefs who had their titles taken away. Does the minister plan on recognizing band council resolutions denying the authority of hereditary chiefs to sign any future agreements without consent of the elected chiefs and the 3,000 members within the Wet'suwet'en they represent?
+Hon. Carolyn Bennett: I think the member must understand that, as we begin the work, the nation will do its work and then we will come to the table to determine what the governance would be. Will it be a hybrid model like at Heiltsuk, like Ktunaxa, like some of the communities developing their constitutions, developing their laws and deciding how they will determine their own governance and that partnership with Canada?
+The Acting Chair (Mr. Bruce Stanton): Mr.Paul-Hus.
+Mr. Pierre Paul-Hus (CharlesbourgHaute-Saint-Charles, CPC): Thank you, Mr.Chair. The current restrictions on non-essential travel at the border do not prevent people from claiming refugee protection if they have family in Canada. Why is the minister refusing to allow married people to cross the border?
+Hon. Bill Blair: I want to thank the honourable member for a very important question. We have heard from many constituents and members of Parliament from right across the country who are expressing concern about non-status spouses being denied entry into the country because their travel is deemed to be non-essential. I've recently been in touch with all of the provinces and territories because I think it's very important that we have their support for any changes
+The Acting Chair (Mr. Bruce Stanton): Mr.Paul-Hus, you have the floor.
+Mr. Pierre Paul-Hus: If I understand correctly, Mr.Minister, you are talking to provincial representatives, but a case like that of ChantalTremblay, for instance, is unacceptable. For two months now, she has been trying to bring her spouse to Canada, but it isn't working. Is there a way to issue a directive to border services officers that married spousesit's often marriages with Americanscan cross the border to join their spouses in Canada?
+Hon. Bill Blair: Just to be very clearagain, I thank the member opposite for the opportunity to clarify thisit is never our intention to separate families, but at the same time, we have imposed appropriate and necessary restrictions on non-essential travel. Our border services officers inquire of everyone coming to that border about the nature of their travel, and for non-citizens who come to that border seeking entry into Canada, if their entry is deemed non-essential, then they exercise their discretion not to allow
+The Acting Chair (Mr. Bruce Stanton): Mr.Paul-Hus, you have the floor.
+Mr. Pierre Paul-Hus: Thank you, Mr.Chair. Information from the Canada Border Services Agency has just come out. Since March21, 425,000people have flown into Canada. Among them were 295,000Canadians, which isn't a problem. However, 100,000foreigners have entered Canada, even though the border is supposedly closed. How does the minister explain the fact that 100,000people arrived in Canada by plane?
+Hon. Bill Blair: Again, I thank the member opposite for the opportunity to clarify. We have imposed very significant restrictions on non-essential travel, but of course there are circumstances where individuals come to this country and their entry into Canada is deemed essential. For example, someone who is providing medical services and coming into Canada to provide those services would be deemed essential, because there is a great need among Canadians for those services. It's dealt with on a case-by-case basis. As you can see by the numbers, we have had a very significant reduction in the travel of all non-Canadians to Canada over the past two months.
+Mr. Pierre Paul-Hus: So the minister confirms that the 100,000people who arrived by air were providing a service considered essential to Canada. I'm not talking about the people who crossed the land border, but the people who came to Canada by air.
+Hon. Bill Blair: What I can tell you is that at all points of entry, including our air borders, we apply the standard that the travel must be deemed essential, and that determination is utilized to see if a person is eligible to enter into the country.
+Mr. Pierre Paul-Hus: We're now learning that the Correctional Service of Canada's investigation into the murder of MarylneLevesque is suspended due to the COVID-19 outbreak. Canadians aren't fooled; they know full well that it is a political decision. All the technological means are available to allow the investigation to continue. I'm proof of that today. Can the minister direct the Correctional Service of Canada to resume the investigation into the death of MarylneLevesque?
+Hon. Bill Blair: Again, I thank the member for the question, because we know the concern of the people of Quebec, and the family of Ms. Levesque needs answers and deserves answers. That's why we asked the Parole Board and the Correctional Service of Canada to convene a board of investigation. Clearly, during COVID transmission, the ability to conduct that investigation and to interview all of the witnesses became extremely difficult and has been temporarily suspended, but at the very earliest opportunity we remain resolute to resume that investigation and get to the bottom of it to provide the answers that the family deserves.
+The Acting Chair (Mr. Bruce Stanton): Mr.Paul-Hus, you have only 20seconds remaining.
+Mr. Pierre Paul-Hus: Mr.Chair, victims of crime are one of the segments of the population most affected by the crisis. As we know, the government refuses to allow victims of crime to participate in parole hearings. For the first time in its history, and to add insult to injury, the government has cancelled all activities related to Victims and Survivors of Crime Week, which was to take place next week. Why is the Prime Minister turning his back on victims?
+Hon. Bill Blair: Again, at the earliest days of COVID, until arrangements could be put in place, there were restrictions on victims participating. We have put the systems in place to allow victims to present their evidence virtually, either by video or by phone, to ensure that their voices are heard in these important things. We very much respect and support the role of victims in these determinations, and we're making every effort to ensure that they can participate.
+The Acting Chair (Mr. Bruce Stanton): We'll now to Mr. Cumming, Edmonton Centre.
+Mr. James Cumming (Edmonton Centre, CPC): Mr. Chair, yesterday I asked the Minister of Small Business how many business credit availability guarantees were issued by EDC, and I didn't get a number. Does she have an exact, finite, number of the guarantees today?
+Hon. Mary Ng: Mr. Chair, thank you to the honourable member for that question. Our government has taken swift and immediate action to support Canadian businesses through this time. Money from this program is flowing, and businesses across the country are receiving the important support that they need.
+Mr. James Cumming: How many BCAP applications have been received so far?
+Hon. Mary Ng: Mr. Chair, these are large loans, and they require important due diligence and adjudication by the financial institutions. We will continue to be open and transparent as the accurate information becomes available.
+Mr. James Cumming: How long does it take to be approved for a BCAP guarantee?
+Hon. Mary Ng: I want to assure the member that we're going to do everything possible to support businesses and workers during this very important time.
+Mr. James Cumming: How many businesses have received funding under the BCAP co-lending program since March?
+Hon. Mary Ng: The lending programs, particularly the program to help small businesses, have really helped lots of businesses. Over 630,000 loans have been issued, and this is really helping those
+The Acting Chair (Mr. Bruce Stanton): We go back to Mr. Cumming.
+Mr. James Cumming: Unfortunately, lots is not an answer for the businesses that I'm trying to talk to. Can you tell me, for the CEBA changes that were recently announced, when will we be able to see people who have income through a dividend able to apply?
+Hon. Mary Ng: That's a very important question, Mr. Chair. There's nothing more important to me and to our government than getting these supports out to businesses. Those small businesses that will meet the expanded CEBA criteria are working very diligently with the financial institutions to make sure that they can get access to those loans as quickly as possible.
+Mr. James Cumming: Can the minister give me a day when that will happen?
+Hon. Mary Ng: The financial institutions are working very hard to make sure that they can make this available to businesses.
+Mr. James Cumming: When will a sole proprietor be able to go for those loans?
+Hon. Mary Ng: We will work very hard and very diligently to make sure that these businesses and those sole proprietors are supported.
+Mr. James Cumming: Could they go on Monday?
+Hon. Mary Ng: There is nothing more important than making sure these businesses weather the difficult time of COVID-19, and our measures are
+The Acting Chair (Mr. Bruce Stanton): We'll go back to Mr. Cumming.
+Mr. James Cumming: How about Tuesday?
+Hon. Mary Ng: I think we will all agree that getting support to these businesses is absolutely crucial. Our commitment is always going to be to get support to these businesses.
+Mr. James Cumming: I can't get a distinct answer on any of those questions. Can you tell me how much headroom is left on the CEBA program?
+Hon. Mary Ng: Today, over 630,000 businesses have received the support to do things like pay for salaries, the 25% top-up for the wage subsidy, pay for rent and pay for insurance and utilities. This is what these loans are helping our small
+Mr. James Cumming: How many dollars are left in the program so businesses can have some certainty that the program will be available for some time?
+Hon. Mary Ng: I think you will see that the businesses across the country that I have talked to really appreciate that the government has stepped up to help them during this difficult time. These include women with businesses, indigenous-owned businesses and those small businesses all across our communities, all across the country, that are getting the necessary help. We are going to keep
+The Acting Chair (Mr. Bruce Stanton): We'll go back to Mr. Cumming.
+Mr. James Cumming: How many dollars? It can't be that complicated. How many dollars?
+Hon. Mary Ng: There are 630,000 businesses that are getting help, and thousands more businesses will be getting help with the expanded criteria. We're going to keep doing the work that we need to help our businesses across this country through this difficult time.
+Mr. James Cumming: I heard from a constituent in my riding that they waited for over four hours on the portal for CECRA. Is there an issue with the portal, and if so, when will it be fixed?
+Hon. Mary Ng: Making sure that businesses get the help for commercial rent support is absolutely crucial right now. We are going to endeavour to make sure that this help gets out to those small businesses. Applications have opened in a staggered way and
+The Acting Chair (Mr. Bruce Stanton): You have time for one last short question, Mr. Cumming.
+Mr. James Cumming: Finally, the Prime Minister yesterday said that a list of all organizations that have been receiving CEWS will be made public. When will that be done?
+Hon. Mary Ng: We have committed to making sure that those companies taking the wage subsidy program will be listed publicly. We have committed to doing that and we will do so.
+The Acting Chair (Mr. Bruce Stanton): We now go to Mr. d'Entremont from West Nova. Mr. d'Entremont, go ahead.
+
+# instructions
+Summarize all key points from this meeting in 4 bullet points.
+Each bullet point should be concise.
+Use between ten to twenty-five words for each bullet.
+Use active voice only. Do not use the passive voice.
+Order the bullets such that more general bullets come first.
+Do not include any action items that resulted from the meeting.
+Do not include speaker names unless it is important to differentiate.
+Start the bullets with '* '.
+","{'num_bullets': 4, 'min_bullet_length': 10, 'max_bullet_length': 25, 'bullet_start': '* '}"
+"Here is a partial transcript of a meeting:
+
+Marketing: So-  So I'm uh gonna have a presentation about um the market, about um yeah what people think. Uh we did a usability lab-test with a hundred persons. And we looked at uh several um things. Uh among them design, uh d d how d did they like the use of it, uh what frustrations they had while using remote controls. Uh well what what will be our market. And uh we asked them if we had some new featu features. If um that would be a good idea or not. Well our findings. Uh our users, they disliked the look and feel of current remote controls. Um uh they especially found found them very ugly. And um th they also found them hard to to learn how to use it. Uh well they also zap a lot. So uh zapping uh should be very easy. And uh fifty percent of the users only use ten percent of the buttons. So a lot of unused buttons. There is more findings. Uh on the buttons. Which uh buttons find users uh very important and which which not? And how much would they use them? Well uh the most used button is the channel selection. And uh we asked them how uh relevant they think uh the buttons are. The power, volume and channel selections are very relevant. Uh teletext is uh less relevant but also important. Uh not important they found the audio, uh that's not the volume but uh specific the the pitch, or the left or right. Uh the screen and the brightness. And uh channel settings. Uh th and they also are not used very often. Then we have a few um graphs about the market. Uh here we can see what the market share is of uh several groups. Um as you can see, most users are uh between thirty six and forty five. Um the the the younger group between sixteen and twenty five is not very big. And to come back on the the swapping uh things, uh I don't think uh, I ... I think the younger will be most interest in it. But uh they are not a very big group. Um in the ..we asked them, uh how would you like a s a new feature. If you have an LCD on the remote control, what would you think of it. Now you can clearly see young users say ... I will-  that would very nice. And older user think uh they will be scared of change ... I think.
+Industrial Designer: ...
+Marketing: And they won't like it. And another thing, how would you like to have a speech recognition on it. Well here we see the same. Young users uh think that's an interesting idea. And old users not. Uh well we uh found out that there are two-  several markets at which we can aim. Uh the first are the younger, the age between sixteen and forty five. Uh they are highly interested in the features, as you can see uh here. And um they are more critical on their money spending. Uh the second group is the older group. Aged between forty six and sixty five. They are less interested in uh new features. But uh they spend their money more easily. Now if we look back at this graph, we can see that among the first group is about um sixty percent. And the second group about forty percent. So the the first group is bigger. Well then I come to my uh personal preferences. Uh yeah the first question is uh-  also we have to ask is at the which market do we aim at. Uh of course n uh saying we aim at the young group doesn't say that old people won't buy it. But less of them will buy it. Um well I uh-  ... Okay. What I thought, um even young people say it's hard to use, remote control. So if you make a remote control that is uh very easy to use, that's especially aimed at this group, even uh the young group will also be more interested. And um we can make special features. But uh I think it looks nice in the first time. But when use it, uh I don't know what's uh good thing of speech recognition.
+User Interface: Mm-hmm.
+Marketing: Um well th uh that's my second point.
+Industrial Designer: ...
+Marketing: Uh less important functions should be discarded from the remote control. It's about discussion we had earlier. Um-  You can find most functions on a TV set. So uh you don't have to have a lot of audio options, or screen options to change the brightness. And such things. Um well the design is very important. One thing I did not say I think, is that a lot of users also said then I would uh buy a good looking uh remote control if there will be one. But they found most remote controls very ugly. So the design of our remote control is very important. And uh yeah it should be very zap friendly, as most users use it for that. That were my findings.
+Project Manager: Okay thank you.
+Industrial Designer: Yeah. I have uh one question.
+Project Manager: Yes.
+Industrial Designer: If we aim for the younger people, um and there will be uh a lot of features like LCD or the the the speech uh f recognising, uh the cost will be a lot of h uh a lot higher.
+User Interface: Mm-hmm.
+Industrial Designer: Uh I think we don't have that in our budget.
+Marketing: Yes.
+User Interface: No.
+Industrial Designer: Do you think?
+Marketing: No.
+User Interface: And I don't uh I don't think twenty five Euros for a remote is really cheap or something.
+Industrial Designer: Like-  No. No.
+User Interface: So it's-  Yeah, it's hard to uh get the younger group.
+Industrial Designer: Uh-huh.
+Project Manager: I think uh the LCD is cheaper than speech recognition. So I think that can be an d good option. LCD.
+User Interface: Mm-hmm. Just the LCD?
+Project Manager: Yes. Only the LCD.
+User Interface: Mm-hmm.
+Project Manager: So-  But we'll come back on that.
+Marketing: Okay.
+Project Manager: Now-  ... Oh, go on. What d d d um-  Um-  Uh we go ..-  back on the decisions later. Now we have a few new product requirements. First, teletext. We have internet now so we don't need the teletext anymore. So not necessary.
+Industrial Designer: ...
+Project Manager: Next. Only for the television. So we don't look at the other things like the radio or something. Only the television. We look at the age group of forty plus. Uh no, younger than forty. Is a g big group, and like you showed, n not very much people buy our stuff. Fourth point. ... Our corporate colour and slogan must be used. Very important for the design. So you can see it on our site.
+Marketing: ...
+Project Manager: Next. Um no. We have to make our decisions, what we want to do. So ... like you said, we need the-  ... Maybe it's good to put it in a document. Now we have to decide what controls do we need. So maybe you can tell us.
+Marketing: Yeah maybe we can first have a discussion uh on the the product requirements you just uh said.
+Project Manager: Sorry?
+Marketing: The the requirements you just said,
+Project Manager: Yes.
+Marketing: maybe we should first have a discussion about that.
+Project Manager: Yes, it's okay.
+Marketing: I uh personally think uh teletext is a good option. Uh not everyone um who is looking TV can go to internet when they want to see the latest news.
+Project Manager: Yeah but we don't use it. It's a-  ... new requirement.
+Marketing: ...
+Project Manager: So, it's not my requirement.
+Industrial Designer: 'Kay, we'll just have to do that.
+Project Manager: We have to do this.
+Industrial Designer: Okay. No discussion about it.
+Marketing: Okay. Okay sorry.
+Project Manager: No.
+Marketing: Then uh- 
+User Interface: ...
+Industrial Designer: Okay. ... Unfortunately.
+Marketing: ...
+Project Manager: So what controls do we need? Who first?
+User Interface: Well a power button?
+Marketing: ...
+Project Manager: Okay. Uh power.
+User Interface: Uh the well um I think separate channels. So- 
+Project Manager: Uh mm channel.
+User Interface: But then both the the separate channels. So so uh zero to nine or something.
+Project Manager: Channel-  Zero to nine.
+User Interface: Uh volume.
+Project Manager: Volume. Maybe it's easy to pick. What was w your one? Techno
+Marketing: Mine? It's the functional requirements.
+Project Manager: Okay. We had w uh no no no no. Where was that example of the- 
+User Interface: Oh mine.
+Project Manager: Johan. That was the-  the the the the-  ..
+User Interface: Technical.
+Project Manager: technical-  Hallo. Okay. What do we need? On-off. Zero to nine.
+Industrial Designer: To change to the next channel, just one button. To move up, move down.
+Project Manager: Yeah that's the channel.
+Marketing: D Yeah. Do we make a menu?
+Project Manager: Menu? Uh yes the n newer televisions ha do have menus. Uh- 
+Marketing: ... ... Uh- 
+Project Manager: ..-  M Menu. I think um the only one or two numbers.
+User Interface: Mm yes.
+Project Manager: And-  Hello? That's ch ...
+Marketing: ..I think it will be um q quite easy to use, to have uh uh four arrows. Up-down for channel selection,
+Project Manager: Yes.
+Marketing: and left-right uh for volume. And uh a menu uh button. And if you press the menu button you get into the menu, and you can use the same buttons. But the-  then to scroll through the menu and to change the options.
+Project Manager: On the LCD screen, you mean?
+Marketing: Uh well yeah that depends on if you have uh the menu on the TV. Or you get the menu on the LCD screen on the remote control.
+Project Manager: Think it's better to have it on the remote control, 'cause it it has to work on all televisions. So
+Marketing: Yes.
+Project Manager: we need- 
+Industrial Designer: But then we come to the costs.
+Project Manager: N Yes. But if we have this- 
+Marketing: 'Kay. But well if you aim at the younger market, um a as they as uh s uh as we seen in the usability uh lab, uh they will buy a nice looking um remote control. And also to find the easy to use uh part very important. So if we have a LCD sh uh screen, and uh not too many buttons, I think that will incre uh uh even when it's a bit more cost, it will still sell.
+Project Manager: So now we don't have a lot of buttons. Is this enough?
+User Interface: Mute.
+Project Manager: Mute. Maybe in the menu?
+User Interface: Um- 
+Marketing: Mm.
+User Interface: Yeah but then it's always uh more than one uh thing to do.
+Project Manager: Mute. Mm-hmm. Okay.
+Marketing: Yeah.
+Project Manager: Maybe more? ... ... No. Well. Then that's all. This will be the buttons. And-  I think that's enough for the next phase. So we can go on to- 
+Industrial Designer: But now we have only the buttons.
+Project Manager: Yes.
+Industrial Designer: And uh we don't yet have to decide what the remote control would look like? Or- 
+Project Manager: No that's for the next phase.
+Industrial Designer: Okay.
+Project Manager: Um ..-  Phase two is the conceptual design. So then we'll have the concepts.
+Industrial Designer: Okay. Okay.
+Project Manager: That's for the-  So uh next point. Now we have lunch-break. After that we have t thirty minutes for work. And you can find the minutes in the Project Documents folder inclusive the uh buttons. No. Your individual action, you can find them in the email. So now it's time for lunch.
+Industrial Designer: Okay.
+Marketing: Okay. Good idea.
+Project Manager: Thanks for coming.
+Industrial Designer: ...
+
+# instructions
+Summarize all key points from this meeting in two bullet points.
+Each bullet point should be concise.
+Use between thirty to forty words for each bullet.
+Use active voice only. Do not use the passive voice.
+Order the bullets such that more general bullets come first.
+Do not include any action items that resulted from the meeting.
+Do not include speaker names unless it is important to differentiate.
+Start the bullets with '* '.
+","{'num_bullets': 2, 'min_bullet_length': 30, 'max_bullet_length': 40, 'bullet_start': '* '}"
+"Here is a partial transcript of a meeting:
+
+Dawn Bowden AM: Okay, thank you. And that answered my second question, Chair, so I'm happy to leave it there. Thank you.
+Lynne Neagle AM: Okay, thank you very much. We're going to go on now to some questions about mental health from Siân Gwenllian. Siân.
+Sian Gwenllian AM: It's a cause of great concern to us all, of course, in terms of the impact of this crisis on mental health and well-being among our children and young people. So, what assessment has the Government undertaken of the impact on these aspects in young people and what work is being done to understand the impact of the pandemic? What longer term measures will be put in place and what support services will be put in place?
+Vaughan Gething AM: Again, I think it's helpful that you've already heard from the education Minister last week, because I think the first of her key principles for returning to school is the impact on the emotional health and well-being of children. So, children's mental health was a central concern and remains so for both myself and the education Minister. Part of the honest challenge, again, is that we don't fully understand the impact on the mental health and well-being of children but we do expect there will have been an impact. So, we're working together with both health boards and our own knowledge and analytical services across the Government to both try to further understand what that is and the difference. Until we have more contact with families, we may not fully understand that, and that's a real point of concern for me. In all of the unknowns within this, the impact on mental health and well-being is absolutely one of them, because we're looking at how we then develop not just a recovery plan for the economy but a recovery plan around mental health, how we support people, and that will have to be informed by the understanding of what's happening when we get more engagement with families about the level of need, and then how we need to think about that. Obviously, it's a key factor for their return to school, but, actually, for the life children and young people lead outside the school environment, and that will be difficult because we're going to phase out of lockdown—it's not going to be a one-hit measure. That absolutely isn't going to happen. We're going to be looking at, at each point, what difference has been made, what more we can do. And, again, there are the efforts we're making to make sure that our online support services and our telephone support services—that we keep on reminding people that they're there and are available, and we want people to make use of them, because I know, as this committee said, we'd much rather be able to support people and intervene earlier rather than wait until there's a much bigger problem in a period of months in the future.
+Sian Gwenllian AM: So, in reality, there's been no assessment undertaken because it's difficult to do that. So, the full picture in terms of the outcomes of the crisis—you don't know what they are at the moment as things stand.
+Vaughan Gething AM: We can't know, because we don't have that level of contact. There is a development—. I wouldn't say that no work's being done, but I couldn't tell you honestly that that work is finalised and we have a definitive understanding of the picture. If I tried to say that, then I'm sure you'd ask me, 'How on earth can you say that? If you're not having regular contact with people, you can't possibly understand the picture.' And it's much better to say, 'We don't understand the full picture. We know there'll have been an impact. We're working alongside health boards and others, but we'll know more as we carry on having more contact with families.' I'll look at a variety of different areas, again, both to reform the recovery plan, but also then to understand what we need to do at various points in the future, and the picture that we're seeing isn't straightforward and we need to make sure that we don't try to pretend to ourselves or to the public that there is a one-off measure that will allow us to be successful in all the areas that we'd want to be.
+Sian Gwenllian AM: But can you give the committee an assurance today that this area of mental health and well-being is going to be a priority for you as health Minister?
+Vaughan Gething AM: Of course. Not just on the work we've done in the past; not just because it's one of the key principles for the education Minister about the reopening of schools, but it is a real worry list for me about how we understand the impact on the mental health and well-being of children and young people, and to move forwards, that we don't end up with an entire generation of children and young people who grow up with a range of damage because we haven't thought about what that will look like. So, the mental health recovery plan will of course be of very real importance to me. In amongst all the other priorities I have, I'm certainly not going to allow the mental health and well-being of children and young people to be forgotten.
+Sian Gwenllian AM: And how does the current capacity in terms of child and adolescent mental health services compare to service capacity prior to the coronavirus outbreak in Wales? Have you had to shift some resources over from CAMHS, for example, in order to deal with more general aspects of coronavirus?
+Vaughan Gething AM: No, we've actually got—. Maybe perhaps it might be helpful, Chair, if Tracey Breheny could say something about the way that we're monitoring the impact we have, in terms of we've got a reporting tool, but also weekly contact with leads in CAMHS services.
+Lynne Neagle AM: Tracey.
+Tracey Breheny: Of course. Thanks, Minister. Yes, on that question, we moved pretty quickly at the beginning of the pandemic phase to put in place, as the Minister said, a weekly monitoring tool of all local health boards, so through that tool, we look at that every week in terms of collecting information. Whilst national reporting's been stood down, we are picking up assurance through that tool on things like staff sickness in CAMHS services, referral numbers and so on, so we do have that tool in place, and at the moment, that's telling us that the system can meet the capacity; has the capacity to meet need.
+Sian Gwenllian AM: Have CAMHS staff been shifted over to do other work during this virus outbreak?
+Tracey Breheny: There has been some movement, as I'm saying, around health boards, particularly where in the first phase of the epidemic the concentration was on in-patient provision, providing critical care, but my understanding is from the latest tool that we looked at last week, those staff are gradually not just returning to work from self-isolation or whatever, or from different parts of the system.
+Sian Gwenllian AM: And then, what about the capacity for CAMHS primary mental health services? Has there been a reduction in that capacity since the beginning of the pandemic in terms of in-patients? Because that's what I'm hearing, that there has been such a reduction, but how are those patients then treated and served?
+Tracey Breheny: In terms of in-patient capacity, that is in the system in both the north Wales and in the south Wales unit at the moment. There were some discharges of young people, but we've had the assurance that that was only undertaken where it was clinically safe to do so and where the community support was in place.
+Sian Gwenllian AM: And finally in this section from me, given that schools are of course closed and that schools are so very important in terms of signposting young people towards services, how can young people access appropriate services—online services, for example? How are they signposted towards those services at the moment?
+Vaughan Gething AM: Well, we've not closed off general practice and, as you know, we've expanded the ability for people to access services in an online manner. We've expanded a range of telephone advice services, so the telephone advice service we already provide, we've made sure that's maintained, and both myself and the deputy Minister have referred to that on a number of occasions. I think the real struggle and the real difficulty is actually how you punch through different messages when the broader news agenda is so overwhelmingly focused on headline messages in other areas. That is, again, a worry for me, but the communications we have within the health and care system, people should know where to refer people to and how to provide access to both telephone and online support that continues to be available, and actually, as I say, we've expanded that right across our healthcare system. That's what I’m keen to see continue into the future. Whatever the post-COVID-19 world is, I don't want to miss out on the progress we have made in the online provision of services. Of course, most children and young people expect to be able to access services in an online manner already.
+Sian Gwenllian AM: But, of course, there will be some who are missed; they may fall between two stools because they won’t know where to turn.
+Vaughan Gething AM: Yes, and that, again, comes back to our challenge of how we help children and young people in their context, with their families, to know where support and advice and guidance is. Many people are defaulting to their general practitioner if they can't find advice somewhere else, so that's why there's the information we're providing through general practice to signpost people, so those pathways haven’t been closed off. It's about making sure that people have alternative means that they’re prepared to use at this point in time. If we go back to where we started this evidence session, we were talking about the difficulty of families who don't want to engage in a traditional person-to-person contact or being in the same room as someone else or allowing people into their home. So, there's a real challenge about how we make the service available, but then encourage people to take it up, so that we don’t see much greater harm that we have to try and resolve at a later point.
+Lynne Neagle AM: Okay, thank you. I've got a supplementary from Suzy Davies, and can I remind Ministers about concise answers, please? Suzy.
+Suzy Davies AM: Yes, thank you. Just as we're speaking about children and young people's mental health, I wonder if you can confirm whether you've seen the United Nations Convention on the Rights of the Child's reports about what they call the grave physical and psychological effect on children and young people, and whether the operational guidance you've given out is responding to that in any way, or maybe there was something in that that you hadn’t thought of and you can respond to as we go along.
+Vaughan Gething AM: I, personally, haven't read that advice, but the Government's already concerned about the direct physical and mental health impact of lockdown restrictions. You don't need to be a parent to recognise that that’s a potential issue for children and young people. But, I'm sure—. I haven't read it, but that's been signposted, so I can check with officials if they have and if that would change the advice and the position that we're already adopting, because we do regularly look at a range of advice from a range of sources, including the UN, the World Health Organization and others.
+Suzy Davies AM: Thank you.
+Lynne Neagle AM: Okay, and we are going to come onto children's rights. But, as you know, Minister, the prevention of young suicide is a cause that is very close to my heart. Can I ask what assessment the Welsh Government has made of an increase in suicide amongst children and young people during this pandemic and because of this pandemic?
+Vaughan Gething AM: Apart from the general concern that I've expressed on mental health generally, we are already investigating, we're having a—. We've commissioned, through the Government, the delivery unit to work with the national advisory group, including Dr Ann John and other people, to review the current, unexpected deaths during the start of the pandemic here in Wales, because we want to try to understand the wider concerns about the potential effects of the restrictions on the mental health and well-being of children and young people, and if that is leading to a spike in suicide or not. So, that's why we've commissioned that review to be carried out with the current numbers of unexpected deaths that we have, so we're able then to provide a report to understand where we are. My understanding is that we should have a report on that review before the end of this month and, obviously, I know the committee’s got an interest, so if it's helpful we can write to you once we've had a chance to receive the report and to look at it.
+Lynne Neagle AM: Yes, please. Thank you. In terms of provision of crisis care, then, how has that been impacted by the pandemic? Are those crisis services available for children and young people who need them at the moment?
+Vaughan Gething AM: Yes, they continue to be available. We still have seven-day-a-week crisis care. We've made clear that mental health services, including those for children and young people, are essential services to be provided. They're not services to be scaled down. They were not part of the series of measures that I stopped within the health service on 13 March. We have built up those crisis care services over a period of time, and the last thing we want to see is to see them disappear during this period of time when there are well-understood concerns about emotional and mental health.
+Lynne Neagle AM: Okay, thank you. Moving on to perinatal mental health, this morning I hosted a round-table with the NSPCC where we heard about lots of good practice that's going on in terms of supporting new mothers and their families in this period, but I wonder if you can tell the committee what you are doing as a Government to make sure that there is consistent perinatal support for all women across Wales in what is a difficult time for any new mother, let alone in a pandemic.
+Vaughan Gething AM: We continue, again, to provide our perinatal mental health service. That's not been stopped either. We've also been looking at how that's provided on a phone or online basis where possible, because again the same concerns exist about physical contact with people. So, we're looking to make sure that the progress isn't lost that we've made. We know there is more to go. So, the service may have changed, but it still absolutely exists. And again, part of the challenge in all of this is about the pause or the interruption in work to create the in-patient capacity that I've previously committed to. So, I want to understand what that really means, but again the problem is, at this point in the pandemic, I can't give you an answer about what that means for that in-patient provision. We're still committed to it, but I'm concerned about the time frame—that is partly about the length and the extent. But again, I'm really impressed by the continuing commitment of our staff to deliver this service for women in what is a particularly uncertain time. It's difficult enough in terms of the challenge in terms of perinatal mental health in normal times, about people being prepared to come forward and then receiving the sort of response they'd want, and even more so now.
+Lynne Neagle AM: Is the Welsh Government aware that there's apparently been a decrease in the numbers of women being willing to look at mother and baby unit provision, and will you be taking that into account in your planning? Because, obviously, we wouldn't want people to think that was because of a lack of need; it's down to fear and the lockdown.
+Vaughan Gething AM: Yes, we're aware there's been a reduction in people wanting to make use of the service—or being prepared to make use of the service is probably a better phrase—because we know that's the same with a range of other areas. There aren't fewer people having strokes than there were at this period of time last year; the reason why the figures are different is the way that people are behaving because of their concerns about coronavirus. So, I certainly wouldn't be using this period of time to plan for the need that exists for a facility that we want to create. So, I'm happy to give that assurance, Chair.
+Lynne Neagle AM: Thank you. The next questions are from Suzy Davies.
+
+# instructions
+Summarize all key points from this meeting in five bullet points.
+Each bullet point should be concise.
+Use between 30 to 45 words for each bullet.
+Use active voice only. Do not use the passive voice.
+Order the bullets such that more general bullets come first.
+Do not include any action items that resulted from the meeting.
+Do not include speaker names unless it is important to differentiate.
+Start the bullets with '* '.
+","{'num_bullets': 5, 'min_bullet_length': 30, 'max_bullet_length': 45, 'bullet_start': '* '}"
